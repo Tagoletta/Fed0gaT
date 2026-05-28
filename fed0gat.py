@@ -521,26 +521,49 @@ class GitManager:
 # ── File Rotator ──────────────────────────────────────────────────────────────
 
 class FileRotator:
-    """Rotates latest-*.txt → timestamped archive, then writes fresh latest files."""
+    """
+    Daily archive strategy:
+      - latest-{kind}.txt  → overwritten every hour with fresh IOCs
+      - YYYY-MM-DD-{kind}.txt → created ONCE per day (snapshot of previous day's
+        latest file), only if yesterday's archive does not already exist in the
+        data directory.
+
+    This way the repo accumulates one file per day per IOC type, and
+    latest-*.txt always reflects the most recent hourly scrape.
+    """
 
     def __init__(self, data_dir: Path, ts: datetime) -> None:
-        self._dir    = data_dir
-        self._ts     = ts
-        self._prefix = ts.strftime("%Y-%m-%d_%H-%M")
+        self._dir  = data_dir
+        self._ts   = ts
+        # Archive gets yesterday's date: the data in latest-*.txt was
+        # collected on the previous calendar day.
+        yesterday         = ts - timedelta(days=1)
+        self._archive_date = yesterday.strftime("%Y-%m-%d")
 
-    def rotate(self, kind: str) -> Optional[Path]:
-        latest = self._dir / f"latest-{kind}.txt"
+    def archive_if_new_day(self, kind: str) -> Optional[Path]:
+        """
+        Copy latest-{kind}.txt → YYYY-MM-DD-{kind}.txt using yesterday's date,
+        but only if that archive file does not already exist.
+        Returns the archive Path on success, None if skipped.
+        """
+        latest  = self._dir / f"latest-{kind}.txt"
+        archive = self._dir / f"{self._archive_date}-{kind}.txt"
+
         if not latest.exists():
+            logger.debug("[archive] latest-%s.txt yok, atlanıyor.", kind)
             return None
-        archive = self._dir / f"{self._prefix}-{kind}.txt"
-        latest.rename(archive)
-        logger.info("[rotate] %s → %s", latest.name, archive.name)
+        if archive.exists():
+            logger.debug("[archive] %s zaten var, atlanıyor.", archive.name)
+            return None
+
+        shutil.copy2(str(latest), str(archive))
+        logger.info("[archive] Günlük arşiv oluşturuldu: %s", archive.name)
         return archive
 
     def write_latest(self, kind: str, entries: List[str]) -> Path:
         dest   = self._dir / f"latest-{kind}.txt"
         unique = sorted(set(entries))
-        # Plain IOC list — no comment headers — firewall/EDR ready
+        # Plain IOC list — no headers — firewall/EDR ready
         dest.write_text("\n".join(unique) + "\n", encoding="utf-8")
         logger.info("[write] latest-%s.txt ← %d unique entries", kind, len(unique))
         return dest
@@ -641,10 +664,10 @@ class Fed0gaT:
             else:
                 logger.info("[guard] %s feed: clean (%d entries)", kind.upper(), before)
 
-        # Rotate & write
+        # Archive (once per day) + write latest
         rotator = FileRotator(data_dir, now)
         for kind in FEED_TYPES:
-            if rotator.rotate(kind):
+            if rotator.archive_if_new_day(kind):
                 stats.archived += 1
             rotator.write_latest(kind, all_iocs[kind])
             stats.counts[kind] = len(set(all_iocs[kind]))
@@ -653,7 +676,7 @@ class Fed0gaT:
         self._update_stats(data_dir, stats.counts, now)
 
         # Commit & push
-        commit_msg = f"Fed0gaT Hourly Update: {now.strftime('%Y-%m-%d %H:%M')} UTC"
+        commit_msg = f"Fed0gaT Hourly Update: {now.strftime('%Y-%m-%d %H:%M')} +03:00"
         if not self._dry_run:
             try:
                 self._git.commit_and_push(commit_msg)
@@ -738,7 +761,7 @@ class Fed0gaT:
         logger.info("╠══════════════════════════════════════════════════════════╣")
         logger.info("║  Sources OK / FAIL : %3d / %-3d                          ║",
                     stats.sources_ok, stats.sources_fail)
-        logger.info("║  Archives created  : %3d                                 ║", stats.archived)
+        logger.info("║  Günlük arşiv      : %3d                                 ║", stats.archived)
         logger.info("╠══════════════════════════════════════════════════════════╣")
         logger.info("║  Commit : %-48s  ║", commit_msg[:48])
         logger.info("╚══════════════════════════════════════════════════════════╝")
