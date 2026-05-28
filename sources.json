@@ -113,7 +113,7 @@
       "json_filter": {"field": "ioc_type", "value": "ip:port"},
       "strip_port": true,
       "api_key_env": "THREATFOX_API_KEY",
-      "api_key_body": "api_key",
+      "api_key_body": "auth_key",
       "enabled": true
     }
   ],
@@ -186,7 +186,7 @@
       "json_root": "data",
       "json_multi_fields": ["sha256_hash", "md5_hash", "sha1_hash"],
       "api_key_env": "MALWAREBAZAAR_API_KEY",
-      "api_key_body": "api_key",
+      "api_key_header": "Auth-Key",
       "enabled": true
     },
     {
@@ -199,7 +199,7 @@
       "json_field": "ioc",
       "json_filter": {"field": "ioc_type", "value": "sha256_hash"},
       "api_key_env": "THREATFOX_API_KEY",
-      "api_key_body": "api_key",
+      "api_key_body": "auth_key",
       "enabled": true
     }
   ],
@@ -218,7 +218,8 @@
       "format": "csv",
       "comment_char": "#",
       "csv_column": 1,
-      "enabled": true
+      "enabled": false,
+      "_note": "404 – ThreatFox has no CSV export for URLs; covered by ThreatFox API source below"
     },
     {
       "name": "OpenPhish – Verified Phishing URLs (Community Feed)",
@@ -276,7 +277,7 @@
       "json_field": "ioc",
       "json_filter": {"field": "ioc_type", "value": "url"},
       "api_key_env": "THREATFOX_API_KEY",
-      "api_key_body": "api_key",
+      "api_key_body": "auth_key",
       "enabled": true
     }
   ]
