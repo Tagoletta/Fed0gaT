@@ -31,7 +31,7 @@ import subprocess
 import sys
 import tempfile
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
 from urllib.parse import urlparse
@@ -69,6 +69,10 @@ DRY_RUN: bool = os.environ.get("DRY_RUN", "0") == "1"
 SOURCES_FILE: Path = Path(__file__).parent / "sources.json"
 
 FEED_TYPES = ("ip", "hash", "url")
+
+# Turkey has been permanently on UTC+3 since 2016 (no DST).
+# Using a fixed offset avoids any tzdata dependency inside containers.
+TZ = timezone(timedelta(hours=3))
 
 
 # ── Data Classes ──────────────────────────────────────────────────────────────
@@ -409,12 +413,12 @@ class FeedFetcher:
             return DataValidator.validate_hash(raw)
 
         if source.kind == "url":
+            # Refang first (some feeds deliver hxxp:// or [.] notation),
+            # then validate, then store as plain live URL for firewall/EDR compatibility.
             refanged = URLDefanger.refang(raw)
-            validated = DataValidator.validate_url(refanged)
-            if validated is None:
+            if DataValidator.validate_url(refanged) is None:
                 return None
-            # Always store in defanged form
-            return URLDefanger.defang(refanged)
+            return refanged
 
         return None
 
@@ -536,16 +540,8 @@ class FileRotator:
     def write_latest(self, kind: str, entries: List[str]) -> Path:
         dest   = self._dir / f"latest-{kind}.txt"
         unique = sorted(set(entries))
-        header = (
-            f"# ─────────────────────────────────────────────────\n"
-            f"# Fed0gaT Cyber Threat Intelligence Feed\n"
-            f"# Type      : {kind.upper()}\n"
-            f"# Generated : {self._ts.strftime('%Y-%m-%d %H:%M:%S UTC')}\n"
-            f"# Entries   : {len(unique)}\n"
-            f"# Note      : URLs are stored in defanged form (hxxp)\n"
-            f"# ─────────────────────────────────────────────────\n"
-        )
-        dest.write_text(header + "\n".join(unique) + "\n", encoding="utf-8")
+        # Plain IOC list — no comment headers — firewall/EDR ready
+        dest.write_text("\n".join(unique) + "\n", encoding="utf-8")
         logger.info("[write] latest-%s.txt ← %d unique entries", kind, len(unique))
         return dest
 
@@ -595,9 +591,9 @@ class Fed0gaT:
         self._git     = GitManager()
 
     def run(self) -> int:
-        now = datetime.now(timezone.utc)
+        now = datetime.now(TZ)
         logger.info("═" * 62)
-        logger.info("  Fed0gaT  │  %s UTC  │  dry_run=%s",
+        logger.info("  Fed0gaT  │  %s +03:00  │  dry_run=%s",
                     now.strftime("%Y-%m-%d %H:%M:%S"), self._dry_run)
         logger.info("═" * 62)
 

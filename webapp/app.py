@@ -22,7 +22,7 @@ from __future__ import annotations
 import json
 import os
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from functools import wraps
 from typing import Any, Dict, List, Tuple
 
@@ -44,6 +44,8 @@ GH_REPO  = os.environ.get("GH_REPO",  "")
 DATA_DIR = os.environ.get("DATA_DIR", "feeds")
 
 VALID_KINDS = {"ip", "hash", "url"}
+
+TZ = timezone(timedelta(hours=3))  # UTC+3 Istanbul (permanent since 2016)
 
 # ── Validators (mirrors fed0gat.py – kept local to avoid import coupling) ─────
 
@@ -165,16 +167,8 @@ def api_save_file(kind: str):
         else:
             rejected.append({"entry": raw, "reason": val})
 
-    unique   = sorted(set(validated))
-    now_str  = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-    header   = (
-        f"# Fed0gaT Threat Intelligence Feed\n"
-        f"# Type      : {kind.upper()}\n"
-        f"# Updated   : {now_str} (via Web Dashboard)\n"
-        f"# Entries   : {len(unique)}\n"
-        f"# ─────────────────────────────────────────────────\n"
-    )
-    content  = header + "\n".join(unique) + "\n"
+    unique  = sorted(set(validated))
+    content = "\n".join(unique) + "\n"
     msg_note = f" – {note}" if note else ""
     commit   = f"Fed0gaT Web: {kind.upper()} listesi güncellendi{msg_note} ({len(unique)} kayıt)"
 
@@ -218,15 +212,7 @@ def api_add_entry(kind: str):
 
         current_lines.append(val)
         unique  = sorted(set(current_lines))
-        now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-        header  = (
-            f"# Fed0gaT Threat Intelligence Feed\n"
-            f"# Type      : {kind.upper()}\n"
-            f"# Updated   : {now_str} (via Web Dashboard)\n"
-            f"# Entries   : {len(unique)}\n"
-            f"# ─────────────────────────────────────────────────\n"
-        )
-        content = header + "\n".join(unique) + "\n"
+        content = "\n".join(unique) + "\n"
         commit  = f"Fed0gaT Web: {kind.upper()} – eklendi: {val}"
         gh.update_file(f"latest-{kind}.txt", content, data["sha"], commit)
         return jsonify({"ok": True, "entry": val, "count": len(unique)})
@@ -255,16 +241,7 @@ def api_delete_entries(kind: str):
         before  = len(data["lines"])
         kept    = sorted(set(ln for ln in data["lines"] if ln not in to_del))
         removed = before - len(kept)
-
-        now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-        header  = (
-            f"# Fed0gaT Threat Intelligence Feed\n"
-            f"# Type      : {kind.upper()}\n"
-            f"# Updated   : {now_str} (via Web Dashboard)\n"
-            f"# Entries   : {len(kept)}\n"
-            f"# ─────────────────────────────────────────────────\n"
-        )
-        content = header + "\n".join(kept) + "\n"
+        content = "\n".join(kept) + "\n"
         commit  = f"Fed0gaT Web: {kind.upper()} – {removed} kayıt silindi"
         gh.update_file(f"latest-{kind}.txt", content, data["sha"], commit)
         return jsonify({"ok": True, "removed": removed, "count": len(kept)})
