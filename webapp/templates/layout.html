@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Fed0gaT{% endblock %} – CTI Dashboard</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg:      '#0a0e27',
+            surface: 'rgba(255,255,255,0.05)',
+            border:  'rgba(255,255,255,0.10)',
+            primary: { DEFAULT: '#6366f1', light: '#818cf8' },
+            success: '#10b981',
+            warning: '#f59e0b',
+            danger:  '#ef4444',
+            muted:   '#a8b5c8',
+          },
+          fontFamily: { mono: ['JetBrains Mono', 'Fira Code', 'monospace'] },
+        }
+      }
+    }
+  </script>
+
+  <!-- JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      background: #0a0e27;
+      background-image:
+        radial-gradient(ellipse 80% 60% at 20% 0%, rgba(99,102,241,.18) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 100%, rgba(16,185,129,.10) 0%, transparent 60%);
+      min-height: 100vh;
+      font-family: 'JetBrains Mono', monospace;
+      color: #f5f7fa;
+    }
+
+    /* ── Glass card ── */
+    .glass {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 1rem;
+    }
+    .glass-sm { border-radius: .75rem; }
+
+    /* ── Sidebar ── */
+    #sidebar {
+      width: 240px;
+      background: rgba(10,14,39,.85);
+      border-right: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(20px);
+      position: fixed; top: 0; left: 0; height: 100vh;
+      display: flex; flex-direction: column;
+      z-index: 40;
+    }
+    #sidebar .logo {
+      padding: 1.5rem 1.25rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    #sidebar nav a {
+      display: flex; align-items: center; gap: .75rem;
+      padding: .65rem 1.25rem;
+      border-radius: .5rem;
+      margin: .15rem .5rem;
+      color: #a8b5c8;
+      text-decoration: none;
+      font-size: .8rem;
+      transition: background .15s, color .15s;
+    }
+    #sidebar nav a:hover,
+    #sidebar nav a.active {
+      background: rgba(99,102,241,.18);
+      color: #818cf8;
+    }
+    #sidebar nav a.active { font-weight: 600; }
+    #sidebar .footer {
+      margin-top: auto;
+      padding: 1rem 1.25rem;
+      border-top: 1px solid rgba(255,255,255,.07);
+      font-size: .7rem;
+      color: #4b5563;
+    }
+
+    /* ── Main content ── */
+    #main {
+      margin-left: 240px;
+      min-height: 100vh;
+      padding: 2rem 2.5rem;
+    }
+
+    /* ── Page header ── */
+    .page-header {
+      margin-bottom: 2rem;
+    }
+    .page-header h1 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #f5f7fa;
+    }
+    .page-header p { color: #a8b5c8; font-size: .8rem; margin-top: .25rem; }
+
+    /* ── KPI cards ── */
+    .kpi-card {
+      padding: 1.25rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .kpi-icon {
+      width: 2.8rem; height: 2.8rem;
+      border-radius: .75rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .kpi-value { font-size: 1.6rem; font-weight: 600; line-height: 1; }
+    .kpi-label { font-size: .7rem; color: #a8b5c8; margin-top: .2rem; }
+    .kpi-delta { font-size: .7rem; margin-top: .35rem; }
+    .delta-up   { color: #10b981; }
+    .delta-down { color: #ef4444; }
+    .delta-flat { color: #a8b5c8; }
+
+    /* ── Badges ── */
+    .badge {
+      display: inline-flex; align-items: center;
+      padding: .15rem .55rem;
+      border-radius: 999px;
+      font-size: .7rem; font-weight: 500;
+    }
+    .badge-indigo { background: rgba(99,102,241,.2);  color: #818cf8; }
+    .badge-green  { background: rgba(16,185,129,.2);  color: #34d399; }
+    .badge-orange { background: rgba(245,158,11,.2);  color: #fbbf24; }
+    .badge-red    { background: rgba(239,68,68,.2);   color: #f87171; }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .5rem 1rem; border-radius: .5rem;
+      font-size: .8rem; font-weight: 500;
+      border: none; cursor: pointer;
+      transition: opacity .15s, transform .1s;
+    }
+    .btn:active { transform: scale(.97); }
+    .btn-primary { background: #6366f1; color: #fff; }
+    .btn-primary:hover { opacity: .88; }
+    .btn-success { background: #10b981; color: #fff; }
+    .btn-success:hover { opacity: .88; }
+    .btn-danger  { background: #ef4444; color: #fff; }
+    .btn-danger:hover  { opacity: .88; }
+    .btn-ghost {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      color: #a8b5c8;
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,.10); color: #f5f7fa; }
+    .btn:disabled { opacity: .4; cursor: not-allowed; }
+
+    /* ── Inputs ── */
+    .inp {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: .5rem;
+      color: #f5f7fa;
+      padding: .5rem .75rem;
+      font-size: .8rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color .15s;
+    }
+    .inp:focus { border-color: #6366f1; }
+    .inp::placeholder { color: #4b5563; }
+
+    /* ── Toast ── */
+    #toast-area {
+      position: fixed; bottom: 1.5rem; right: 1.5rem;
+      display: flex; flex-direction: column; gap: .5rem;
+      z-index: 100;
+    }
+    .toast {
+      display: flex; align-items: center; gap: .6rem;
+      padding: .7rem 1rem;
+      border-radius: .6rem;
+      font-size: .78rem;
+      animation: slideIn .2s ease;
+      min-width: 240px; max-width: 380px;
+    }
+    .toast-ok  { background: rgba(16,185,129,.15); border: 1px solid rgba(16,185,129,.3); color: #34d399; }
+    .toast-err { background: rgba(239,68,68,.15);  border: 1px solid rgba(239,68,68,.3);  color: #f87171; }
+    @keyframes slideIn {
+      from { transform: translateX(120%); opacity: 0; }
+      to   { transform: translateX(0);    opacity: 1; }
+    }
+
+    /* ── Spinner ── */
+    .spinner {
+      width: 1rem; height: 1rem;
+      border: 2px solid rgba(255,255,255,.15);
+      border-top-color: #6366f1;
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      display: inline-block;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Table ── */
+    .tbl { width: 100%; border-collapse: collapse; font-size: .78rem; }
+    .tbl th {
+      padding: .6rem .75rem;
+      text-align: left;
+      color: #a8b5c8;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      font-weight: 500;
+    }
+    .tbl td {
+      padding: .55rem .75rem;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+      vertical-align: middle;
+    }
+    .tbl tr:last-child td { border-bottom: none; }
+    .tbl tr:hover td { background: rgba(255,255,255,.03); }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,.12); border-radius: 3px; }
+  </style>
+
+  {% block head %}{% endblock %}
+</head>
+<body>
+
+<!-- ── Sidebar ── -->
+<aside id="sidebar">
+  <div class="logo">
+    <div style="font-size:1.1rem;font-weight:700;color:#818cf8;letter-spacing:.05em;">
+      ⬡ Fed0gaT
+    </div>
+    <div style="font-size:.68rem;color:#4b5563;margin-top:.2rem;">
+      CTI Intelligence Platform
+    </div>
+    {% if repo %}
+    <div style="font-size:.65rem;color:#374151;margin-top:.3rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+      {{ repo }}
+    </div>
+    {% endif %}
+  </div>
+
+  <nav style="padding:.75rem 0;">
+    <div style="padding:.3rem 1.25rem .2rem;font-size:.62rem;color:#374151;text-transform:uppercase;letter-spacing:.08em;">
+      Genel
+    </div>
+    <a href="/" class="{{ 'active' if request.path == '/' }}">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+        <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+      </svg>
+      Dashboard
+    </a>
+
+    <div style="padding:.5rem 1.25rem .2rem;font-size:.62rem;color:#374151;text-transform:uppercase;letter-spacing:.08em;margin-top:.25rem;">
+      Editör
+    </div>
+    <a href="/editor?kind=ip"   class="{{ 'active' if request.path == '/editor' and request.args.get('kind','ip') == 'ip' }}">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+      IP Listesi
+    </a>
+    <a href="/editor?kind=hash" class="{{ 'active' if request.path == '/editor' and request.args.get('kind') == 'hash' }}">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 9h16M4 15h16M10 3L8 21M16 3l-2 18"/>
+      </svg>
+      Hash Listesi
+    </a>
+    <a href="/editor?kind=url"  class="{{ 'active' if request.path == '/editor' and request.args.get('kind') == 'url' }}">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+      </svg>
+      URL Listesi
+    </a>
+  </nav>
+
+  <div class="footer">
+    Fed0gaT v1.0<br>
+    <span id="sidebar-clock" style="color:#374151;"></span>
+  </div>
+</aside>
+
+<!-- ── Main ── -->
+<main id="main">
+  {% block content %}{% endblock %}
+</main>
+
+<!-- ── Toast area ── -->
+<div id="toast-area"></div>
+
+<script>
+  // Clock
+  (function tick() {
+    const el = document.getElementById('sidebar-clock');
+    if (el) el.textContent = new Date().toLocaleTimeString('tr-TR', { hour12: false });
+    setTimeout(tick, 1000);
+  })();
+
+  // Toast helper
+  function toast(msg, ok = true) {
+    const area = document.getElementById('toast-area');
+    const div  = document.createElement('div');
+    div.className = 'toast ' + (ok ? 'toast-ok' : 'toast-err');
+    div.innerHTML  = `<span>${ok ? '✓' : '✗'}</span><span>${msg}</span>`;
+    area.appendChild(div);
+    setTimeout(() => div.remove(), 4000);
+  }
+
+  // Generic fetch wrapper
+  async function apiFetch(url, method = 'GET', body = null) {
+    const opts = {
+      method,
+      headers: { 'Content-Type': 'application/json' },
+    };
+    if (body) opts.body = JSON.stringify(body);
+    const r = await fetch(url, opts);
+    const json = await r.json();
+    if (!r.ok) throw new Error(json.error || r.statusText);
+    return json;
+  }
+</script>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>

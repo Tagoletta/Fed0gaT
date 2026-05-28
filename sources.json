@@ -1,0 +1,283 @@
+{
+  "_comment": "Fed0gaT feed configuration. Set 'enabled': false to skip a source without removing it.",
+  "_api_keys": {
+    "OTX_API_KEY":          "AlienVault OTX – subscribed pulse indicators (IP/Hash/URL)",
+    "MALWAREBAZAAR_API_KEY": "abuse.ch MalwareBazaar – recent malware samples via API",
+    "THREATFOX_API_KEY":    "abuse.ch ThreatFox – IOCs via POST API (higher rate limits)",
+    "URLHAUS_API_KEY":      "abuse.ch URLhaus  – recent malware URLs via API",
+    "VIRUSTOTAL_API_KEY":   "VirusTotal – ENRICHMENT only (not a feed source; use for hash lookup)",
+    "SHODAN_API_KEY":       "Shodan      – ENRICHMENT only (not a feed source; use for IP details)"
+  },
+
+  "ip": [
+    {
+      "name": "Feodo Tracker – Botnet C2 IP Blocklist",
+      "url": "https://feodotracker.abuse.ch/downloads/ipblocklist.txt",
+      "format": "plain",
+      "comment_char": "#",
+      "enabled": true
+    },
+    {
+      "name": "Feodo Tracker – Recommended (CIDR) Blocklist",
+      "url": "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.txt",
+      "format": "plain",
+      "comment_char": "#",
+      "enabled": true
+    },
+    {
+      "name": "SSLBL – SSL Certificate Blacklist (IPs)",
+      "url": "https://sslbl.abuse.ch/blacklist/sslipblacklist.csv",
+      "format": "csv",
+      "comment_char": "#",
+      "csv_column": 1,
+      "enabled": true
+    },
+    {
+      "name": "ThreatFox – Recent Botnet C2 IP:Port IOCs",
+      "url": "https://threatfox.abuse.ch/export/csv/ip-port/recent/",
+      "format": "csv",
+      "comment_char": "#",
+      "csv_column": 1,
+      "strip_port": true,
+      "enabled": true
+    },
+    {
+      "name": "Blocklist.de – All Attack IPs (SSH, Mail, Apache…)",
+      "url": "https://lists.blocklist.de/lists/all.txt",
+      "format": "plain",
+      "comment_char": "#",
+      "enabled": true
+    },
+    {
+      "name": "Spamhaus DROP – Don't Route Or Peer List",
+      "url": "https://www.spamhaus.org/drop/drop.txt",
+      "format": "plain",
+      "comment_char": ";",
+      "enabled": true
+    },
+    {
+      "name": "Spamhaus EDROP – Extended DROP List",
+      "url": "https://www.spamhaus.org/drop/edrop.txt",
+      "format": "plain",
+      "comment_char": ";",
+      "enabled": true
+    },
+    {
+      "name": "EmergingThreats – Compromised / Known-Attacker IPs",
+      "url": "https://rules.emergingthreats.net/blockrules/compromised-ips.txt",
+      "format": "plain",
+      "comment_char": "#",
+      "enabled": true
+    },
+    {
+      "name": "CINS Score – CriticalStack Active Bad-Guys List",
+      "url": "http://cinsscore.com/list/ci-badguys.txt",
+      "format": "plain",
+      "comment_char": "#",
+      "enabled": true
+    },
+    {
+      "name": "Tor Project – Bulk Exit Node List",
+      "url": "https://check.torproject.org/torbulkexitlist",
+      "format": "plain",
+      "comment_char": "#",
+      "enabled": true
+    },
+    {
+      "name": "AbuseIPDB – Top-1000 Most-Reported IPs (public CSV)",
+      "url": "https://www.abuseipdb.com/blacklist.plaintext",
+      "format": "plain",
+      "comment_char": "#",
+      "enabled": false,
+      "_note": "Requires a free API key passed as ?key=YOUR_KEY in the URL"
+    },
+
+    {
+      "name": "AlienVault OTX – IPv4 Threat Indicators (subscribed pulses)",
+      "url": "https://otx.alienvault.com/api/v1/indicators/export?type=IPv4&limit=50000",
+      "format": "json",
+      "json_root": "results",
+      "json_field": "indicator",
+      "api_key_env": "OTX_API_KEY",
+      "api_key_header": "X-OTX-API-KEY",
+      "enabled": true
+    },
+    {
+      "name": "ThreatFox API – Recent IP:Port IOCs (authenticated)",
+      "url": "https://threatfox-api.abuse.ch/api/v1/",
+      "format": "json",
+      "method": "POST",
+      "post_body": {"query": "get_iocs", "days": 1},
+      "json_root": "data",
+      "json_field": "ioc",
+      "json_filter": {"field": "ioc_type", "value": "ip:port"},
+      "strip_port": true,
+      "api_key_env": "THREATFOX_API_KEY",
+      "api_key_body": "api_key",
+      "enabled": true
+    }
+  ],
+
+  "hash": [
+    {
+      "name": "MalwareBazaar – Recent SHA256 Hashes",
+      "url": "https://bazaar.abuse.ch/export/txt/sha256/recent/",
+      "format": "plain",
+      "comment_char": "#",
+      "enabled": true
+    },
+    {
+      "name": "MalwareBazaar – Recent MD5 Hashes",
+      "url": "https://bazaar.abuse.ch/export/txt/md5/recent/",
+      "format": "plain",
+      "comment_char": "#",
+      "enabled": true
+    },
+    {
+      "name": "MalwareBazaar – Recent SHA1 Hashes",
+      "url": "https://bazaar.abuse.ch/export/txt/sha1/recent/",
+      "format": "plain",
+      "comment_char": "#",
+      "enabled": true
+    },
+    {
+      "name": "ThreatFox – Recent Malware SHA256 IOCs",
+      "url": "https://threatfox.abuse.ch/export/csv/sha256/recent/",
+      "format": "csv",
+      "comment_char": "#",
+      "csv_column": 1,
+      "enabled": true
+    },
+    {
+      "name": "ThreatFox – Recent Malware MD5 IOCs",
+      "url": "https://threatfox.abuse.ch/export/csv/md5/recent/",
+      "format": "csv",
+      "comment_char": "#",
+      "csv_column": 1,
+      "enabled": true
+    },
+
+    {
+      "name": "AlienVault OTX – SHA256 File Hash Indicators",
+      "url": "https://otx.alienvault.com/api/v1/indicators/export?type=FileHash-SHA256&limit=20000",
+      "format": "json",
+      "json_root": "results",
+      "json_field": "indicator",
+      "api_key_env": "OTX_API_KEY",
+      "api_key_header": "X-OTX-API-KEY",
+      "enabled": true
+    },
+    {
+      "name": "AlienVault OTX – MD5 File Hash Indicators",
+      "url": "https://otx.alienvault.com/api/v1/indicators/export?type=FileHash-MD5&limit=20000",
+      "format": "json",
+      "json_root": "results",
+      "json_field": "indicator",
+      "api_key_env": "OTX_API_KEY",
+      "api_key_header": "X-OTX-API-KEY",
+      "enabled": true
+    },
+    {
+      "name": "MalwareBazaar API – Recent Samples (tüm hash türleri)",
+      "url": "https://mb-api.abuse.ch/api/v1/",
+      "format": "json",
+      "method": "POST",
+      "post_body": {"query": "get_recent", "selector": "time"},
+      "json_root": "data",
+      "json_multi_fields": ["sha256_hash", "md5_hash", "sha1_hash"],
+      "api_key_env": "MALWAREBAZAAR_API_KEY",
+      "api_key_body": "api_key",
+      "enabled": true
+    },
+    {
+      "name": "ThreatFox API – Recent Hash IOCs (SHA256+MD5, authenticated)",
+      "url": "https://threatfox-api.abuse.ch/api/v1/",
+      "format": "json",
+      "method": "POST",
+      "post_body": {"query": "get_iocs", "days": 1},
+      "json_root": "data",
+      "json_field": "ioc",
+      "json_filter": {"field": "ioc_type", "value": "sha256_hash"},
+      "api_key_env": "THREATFOX_API_KEY",
+      "api_key_body": "api_key",
+      "enabled": true
+    }
+  ],
+
+  "url": [
+    {
+      "name": "URLhaus – Active Malware Distribution URLs",
+      "url": "https://urlhaus.abuse.ch/downloads/text/",
+      "format": "plain",
+      "comment_char": "#",
+      "enabled": true
+    },
+    {
+      "name": "ThreatFox – Recent Malware URL IOCs",
+      "url": "https://threatfox.abuse.ch/export/csv/url/recent/",
+      "format": "csv",
+      "comment_char": "#",
+      "csv_column": 1,
+      "enabled": true
+    },
+    {
+      "name": "OpenPhish – Verified Phishing URLs (Community Feed)",
+      "url": "https://openphish.com/feed.txt",
+      "format": "plain",
+      "comment_char": "#",
+      "enabled": true
+    },
+    {
+      "name": "PhishTank – Online Valid Phishing URLs (CSV)",
+      "url": "http://data.phishtank.com/data/online-valid.csv",
+      "format": "csv",
+      "comment_char": "#",
+      "csv_column": 1,
+      "enabled": false,
+      "_note": "Free registration required at phishtank.com. Replace URL with: http://data.phishtank.com/data/YOUR_API_KEY/online-valid.csv"
+    },
+    {
+      "name": "URLhaus – Recent Malware URLs (last 30 days, online only)",
+      "url": "https://urlhaus.abuse.ch/downloads/text_online/",
+      "format": "plain",
+      "comment_char": "#",
+      "enabled": false,
+      "_note": "Subset of the full URLhaus feed – enables if you want less noise"
+    },
+
+    {
+      "name": "AlienVault OTX – URL Indicators (subscribed pulses)",
+      "url": "https://otx.alienvault.com/api/v1/indicators/export?type=URL&limit=20000",
+      "format": "json",
+      "json_root": "results",
+      "json_field": "indicator",
+      "api_key_env": "OTX_API_KEY",
+      "api_key_header": "X-OTX-API-KEY",
+      "enabled": true
+    },
+    {
+      "name": "URLhaus API – Recent Active URLs (authenticated, higher limit)",
+      "url": "https://urlhaus-api.abuse.ch/v1/urls/recent/",
+      "format": "json",
+      "json_root": "urls",
+      "json_field": "url",
+      "json_filter": {"field": "url_status", "value": "online"},
+      "api_key_env": "URLHAUS_API_KEY",
+      "api_key_header": "Auth-Key",
+      "enabled": true
+    },
+    {
+      "name": "ThreatFox API – Recent URL IOCs (authenticated)",
+      "url": "https://threatfox-api.abuse.ch/api/v1/",
+      "format": "json",
+      "method": "POST",
+      "post_body": {"query": "get_iocs", "days": 1},
+      "json_root": "data",
+      "json_field": "ioc",
+      "json_filter": {"field": "ioc_type", "value": "url"},
+      "api_key_env": "THREATFOX_API_KEY",
+      "api_key_body": "api_key",
+      "enabled": true
+    }
+  ]
+}

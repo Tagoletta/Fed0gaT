@@ -1,0 +1,560 @@
+{% extends "layout.html" %}
+{% block title %}Editör – {{ active_kind | upper }}{% endblock %}
+
+{% block head %}
+<style>
+  /* ── Tab bar ── */
+  .tab-bar { display: flex; gap: .5rem; margin-bottom: 1.5rem; }
+  .tab-btn {
+    display: flex; align-items: center; gap: .5rem;
+    padding: .55rem 1.1rem;
+    border-radius: .5rem;
+    font-size: .8rem; font-weight: 500;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+    color: #a8b5c8;
+    cursor: pointer; text-decoration: none;
+    transition: background .15s, color .15s, border-color .15s;
+  }
+  .tab-btn:hover  { background: rgba(255,255,255,.08); color: #e5e7eb; }
+  .tab-btn.active { background: rgba(99,102,241,.18); border-color: rgba(99,102,241,.4); color: #818cf8; }
+  .tab-btn .tab-count {
+    font-size: .65rem; padding: .1rem .45rem;
+    border-radius: 999px; background: rgba(255,255,255,.08); color: #9ca3af;
+    min-width: 28px; text-align: center;
+  }
+  .tab-btn.active .tab-count { background: rgba(99,102,241,.3); color: #c7d2fe; }
+
+  /* ── Toolbar ── */
+  .toolbar {
+    display: flex; align-items: center; gap: .6rem;
+    flex-wrap: wrap;
+    padding: .75rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    margin-bottom: 0;
+  }
+
+  /* ── Search + add row ── */
+  .search-row {
+    display: flex; gap: .5rem; align-items: center;
+    padding: .75rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .search-row .inp { flex: 1; }
+
+  /* ── Entry list ── */
+  #entry-list {
+    overflow-y: auto;
+    max-height: calc(100vh - 380px);
+    min-height: 200px;
+  }
+  .entry-row {
+    display: flex; align-items: center; gap: .6rem;
+    padding: .4rem .75rem;
+    border-bottom: 1px solid rgba(255,255,255,.04);
+    font-size: .78rem;
+    transition: background .1s;
+  }
+  .entry-row:hover { background: rgba(255,255,255,.04); }
+  .entry-row.selected { background: rgba(99,102,241,.1); }
+  .entry-row .entry-cb { width: 14px; height: 14px; accent-color: #6366f1; cursor: pointer; }
+  .entry-row .entry-val {
+    flex: 1; font-family: 'JetBrains Mono', monospace;
+    color: #e5e7eb; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .entry-row .del-btn {
+    opacity: 0;
+    background: none; border: none; cursor: pointer;
+    color: #ef4444; font-size: .9rem; padding: .1rem .3rem; border-radius: .25rem;
+    transition: opacity .1s, background .1s;
+  }
+  .entry-row:hover .del-btn { opacity: 1; }
+  .entry-row .del-btn:hover { background: rgba(239,68,68,.15); }
+
+  /* ── Pagination ── */
+  .pagination {
+    display: flex; align-items: center; gap: .4rem;
+    padding: .6rem 1rem;
+    border-top: 1px solid rgba(255,255,255,.06);
+    font-size: .75rem; color: #6b7280;
+  }
+  .pg-btn {
+    padding: .2rem .55rem; border-radius: .35rem;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    color: #9ca3af; cursor: pointer; font-size: .72rem;
+  }
+  .pg-btn:hover { background: rgba(255,255,255,.10); color: #e5e7eb; }
+  .pg-btn.current { background: rgba(99,102,241,.2); border-color: rgba(99,102,241,.4); color: #818cf8; }
+  .pg-btn:disabled { opacity: .35; cursor: not-allowed; }
+
+  /* ── Bulk import modal ── */
+  #bulk-modal {
+    display: none;
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(0,0,0,.6);
+    backdrop-filter: blur(4px);
+    align-items: center; justify-content: center;
+  }
+  #bulk-modal.open { display: flex; }
+  #bulk-box {
+    width: min(620px, 92vw);
+    background: #111827;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+  #bulk-ta {
+    width: 100%; height: 220px;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: .5rem;
+    color: #e5e7eb;
+    padding: .75rem; font-size: .78rem;
+    font-family: 'JetBrains Mono', monospace;
+    resize: vertical; outline: none;
+    transition: border-color .15s;
+  }
+  #bulk-ta:focus { border-color: #6366f1; }
+
+  /* ── Status bar ── */
+  #status-bar {
+    font-size: .72rem; color: #6b7280;
+    padding: .4rem 1rem;
+    border-top: 1px solid rgba(255,255,255,.05);
+    display: flex; align-items: center; gap: 1rem;
+  }
+
+  /* ── Highlight for search ── */
+  .hl { background: rgba(251,191,36,.3); border-radius: 2px; color: #fde68a; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>IOC Editörü</h1>
+  <p>Tehdit listelerini görüntüle, ekle, sil ve GitHub'a kaydet</p>
+</div>
+
+<!-- ── Tab bar ── -->
+<div class="tab-bar">
+  <a href="/editor?kind=ip"   class="tab-btn {{ 'active' if active_kind == 'ip' }}">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/>
+    </svg>
+    IP Adresleri
+    <span class="tab-count" id="count-ip">…</span>
+  </a>
+  <a href="/editor?kind=hash" class="tab-btn {{ 'active' if active_kind == 'hash' }}">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M4 9h16M4 15h16M10 3L8 21M16 3l-2 18"/>
+    </svg>
+    Hash'ler
+    <span class="tab-count" id="count-hash">…</span>
+  </a>
+  <a href="/editor?kind=url"  class="tab-btn {{ 'active' if active_kind == 'url' }}">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+    </svg>
+    URL'ler
+    <span class="tab-count" id="count-url">…</span>
+  </a>
+</div>
+
+<!-- ── Editor card ── -->
+<div class="glass" style="overflow:hidden;">
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <button class="btn btn-danger btn-sm" id="btn-del-sel" onclick="deleteSelected()" disabled>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/>
+        <path d="M10 11v6M14 11v6M9 6V4h6v2"/>
+      </svg>
+      Seçilenleri Sil (<span id="sel-count">0</span>)
+    </button>
+    <button class="btn btn-ghost" onclick="selectAll()">Tümünü Seç</button>
+    <button class="btn btn-ghost" onclick="selectNone()">Seçimi Kaldır</button>
+    <div style="flex:1;"></div>
+    <button class="btn btn-ghost" onclick="openBulk()">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+      </svg>
+      Toplu Import
+    </button>
+    <button class="btn btn-success" id="btn-save" onclick="saveAll()">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+        <polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/>
+      </svg>
+      GitHub'a Kaydet
+    </button>
+    <button class="btn btn-ghost" onclick="loadFile()">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>
+        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+      </svg>
+      Yenile
+    </button>
+  </div>
+
+  <!-- Search + add row -->
+  <div class="search-row">
+    <input class="inp" id="search-inp" type="text"
+           placeholder="Filtrele / ara…"
+           oninput="onSearch(this.value)">
+    <input class="inp" id="add-inp" type="text"
+           placeholder="Yeni giriş ekle…"
+           style="width:260px;"
+           onkeydown="if(event.key==='Enter') addEntry()">
+    <button class="btn btn-primary" onclick="addEntry()">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+      </svg>
+      Ekle
+    </button>
+  </div>
+
+  <!-- Entry list -->
+  <div id="entry-list">
+    <div style="padding:2rem;text-align:center;color:#4b5563;">
+      <div class="spinner" style="margin:0 auto .75rem;"></div>
+      Yükleniyor…
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination" id="pagination-bar"></div>
+
+  <!-- Status bar -->
+  <div id="status-bar">
+    <span id="status-text" style="color:#6b7280;">Hazır</span>
+    <span style="margin-left:auto;" id="status-right"></span>
+  </div>
+
+</div>
+
+<!-- ── Bulk import modal ── -->
+<div id="bulk-modal">
+  <div id="bulk-box">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+      <div style="font-weight:600;font-size:.9rem;">Toplu Import</div>
+      <button onclick="closeBulk()" style="background:none;border:none;color:#6b7280;cursor:pointer;font-size:1.2rem;">✕</button>
+    </div>
+    <p style="font-size:.75rem;color:#6b7280;margin-bottom:.75rem;">
+      Her satıra bir giriş yazın veya yapıştırın. Geçersiz satırlar otomatik atlanır.
+    </p>
+    <textarea id="bulk-ta" placeholder="1.2.3.4&#10;5.6.7.8&#10;9.10.11.12&#10;…"></textarea>
+    <div style="display:flex;justify-content:flex-end;gap:.6rem;margin-top:1rem;">
+      <button class="btn btn-ghost" onclick="closeBulk()">İptal</button>
+      <button class="btn btn-primary" onclick="importBulk()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+        Listeye Ekle
+      </button>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const KIND       = '{{ active_kind }}';
+const PAGE_SIZE  = 150;
+
+// State
+let allLines     = [];   // full list (source of truth)
+let filteredIdxs = [];   // indices into allLines matching current filter
+let selectedSet  = new Set();  // set of entry strings selected
+let currentPage  = 0;
+let fileSha      = null;
+let filterQuery  = '';
+let dirty        = false;  // unsaved changes
+
+// ── Load from GitHub ──────────────────────────────────────────────────────────
+async function loadFile() {
+  setStatus('Yükleniyor…', true);
+  try {
+    const data = await apiFetch(`/api/file/${KIND}`);
+    allLines   = data.lines || [];
+    fileSha    = data.sha;
+    dirty      = false;
+    updateCountBadges(data.count);
+    applyFilter(filterQuery);
+    setStatus(`${fmtNum(allLines.length)} kayıt yüklendi`, false, data.count);
+  } catch(err) {
+    setStatus('Hata: ' + err.message, false);
+    toast('Dosya yüklenemedi: ' + err.message, false);
+  }
+}
+
+// ── Load all tab counts ───────────────────────────────────────────────────────
+async function loadAllCounts() {
+  for (const kind of ['ip','hash','url']) {
+    try {
+      const d = await apiFetch(`/api/file/${kind}`);
+      document.getElementById(`count-${kind}`).textContent = fmtNum(d.count);
+    } catch(e) {
+      document.getElementById(`count-${kind}`).textContent = '?';
+    }
+  }
+}
+
+// ── Filter / search ───────────────────────────────────────────────────────────
+function onSearch(q) {
+  filterQuery = q.toLowerCase().trim();
+  applyFilter(filterQuery);
+}
+
+function applyFilter(q) {
+  if (q) {
+    filteredIdxs = allLines
+      .map((v, i) => ({ v, i }))
+      .filter(({ v }) => v.toLowerCase().includes(q))
+      .map(({ i }) => i);
+  } else {
+    filteredIdxs = allLines.map((_, i) => i);
+  }
+  currentPage = 0;
+  renderPage();
+}
+
+// ── Render current page ───────────────────────────────────────────────────────
+function renderPage() {
+  const list  = document.getElementById('entry-list');
+  const total = filteredIdxs.length;
+  const start = currentPage * PAGE_SIZE;
+  const slice = filteredIdxs.slice(start, start + PAGE_SIZE);
+
+  if (slice.length === 0) {
+    list.innerHTML = `<div style="padding:2rem;text-align:center;color:#4b5563;font-size:.78rem;">
+      ${filterQuery ? 'Arama sonucu bulunamadı.' : 'Liste boş.'}
+    </div>`;
+    renderPagination(total);
+    return;
+  }
+
+  list.innerHTML = slice.map(idx => {
+    const val = allLines[idx];
+    const sel = selectedSet.has(val);
+    const display = filterQuery
+      ? val.replace(new RegExp(`(${escRe(filterQuery)})`, 'gi'), '<span class="hl">$1</span>')
+      : val;
+    return `<div class="entry-row${sel ? ' selected' : ''}" data-idx="${idx}" data-val="${encodeURIComponent(val)}">
+      <input type="checkbox" class="entry-cb" ${sel ? 'checked' : ''}
+             onchange="toggleSel('${encodeURIComponent(val)}', this.checked, this.closest('.entry-row'))">
+      <span class="entry-val" title="${val}">${display}</span>
+      <button class="del-btn" title="Sil" onclick="deleteOne('${encodeURIComponent(val)}')">✕</button>
+    </div>`;
+  }).join('');
+
+  renderPagination(total);
+  updateSelCount();
+  setStatusRight(`${fmtNum(total)} / ${fmtNum(allLines.length)} kayıt gösteriliyor`);
+}
+
+function renderPagination(total) {
+  const bar   = document.getElementById('pagination-bar');
+  const pages = Math.ceil(total / PAGE_SIZE);
+  if (pages <= 1) { bar.innerHTML = ''; return; }
+
+  const make = (p, label, disabled = false, active = false) =>
+    `<button class="pg-btn${active ? ' current' : ''}" ${disabled ? 'disabled' : ''}
+             onclick="goPage(${p})">${label}</button>`;
+
+  let html = make(currentPage - 1, '‹ Önceki', currentPage === 0);
+
+  // Show at most 7 page buttons around current
+  const from = Math.max(0, currentPage - 3);
+  const to   = Math.min(pages - 1, currentPage + 3);
+  if (from > 0)        html += make(0, '1') + (from > 1 ? '<span style="color:#374151;">…</span>' : '');
+  for (let p = from; p <= to; p++) html += make(p, p + 1, false, p === currentPage);
+  if (to < pages - 1)  html += (to < pages - 2 ? '<span style="color:#374151;">…</span>' : '') + make(pages - 1, pages);
+
+  html += make(currentPage + 1, 'Sonraki ›', currentPage >= pages - 1);
+  html += `<span style="margin-left:.5rem;">Toplam: ${fmtNum(total)} kayıt, ${pages} sayfa</span>`;
+  bar.innerHTML = html;
+}
+
+function goPage(p) { currentPage = p; renderPage(); window.scrollTo(0, 0); }
+
+// ── Selection ─────────────────────────────────────────────────────────────────
+function toggleSel(encoded, checked, row) {
+  const val = decodeURIComponent(encoded);
+  if (checked) selectedSet.add(val); else selectedSet.delete(val);
+  row.classList.toggle('selected', checked);
+  updateSelCount();
+}
+function selectAll()  { filteredIdxs.forEach(i => selectedSet.add(allLines[i])); renderPage(); }
+function selectNone() { selectedSet.clear(); renderPage(); }
+function updateSelCount() {
+  const n = selectedSet.size;
+  document.getElementById('sel-count').textContent = n;
+  document.getElementById('btn-del-sel').disabled = n === 0;
+}
+
+// ── Add single entry ──────────────────────────────────────────────────────────
+async function addEntry() {
+  const inp   = document.getElementById('add-inp');
+  const value = inp.value.trim();
+  if (!value) return;
+  if (!fileSha) { toast('Önce dosya yüklenmeli', false); return; }
+
+  setStatus('Ekleniyor…', true);
+  try {
+    const res = await apiFetch(`/api/file/${KIND}/add`, 'POST', { entry: value, sha: fileSha });
+    fileSha = null;  // SHA changed; reload
+    allLines = [...allLines, value];
+    allLines = [...new Set(allLines)].sort();
+    applyFilter(filterQuery);
+    inp.value = '';
+    updateCountBadges(allLines.length);
+    toast(`✓ ${value} eklendi (${fmtNum(res.count)} kayıt)`);
+    // Reload to get new SHA
+    await loadFile();
+    setStatus(`Eklendi: ${value}`);
+  } catch(err) {
+    toast('Eklenemedi: ' + err.message, false);
+    setStatus('Hata: ' + err.message);
+  }
+}
+
+// ── Delete single entry ───────────────────────────────────────────────────────
+async function deleteOne(encoded) {
+  const val = decodeURIComponent(encoded);
+  if (!fileSha) { toast('Önce dosya yüklenmeli', false); return; }
+  if (!confirm(`"${val}" silinsin mi?`)) return;
+
+  setStatus('Siliniyor…', true);
+  try {
+    const res = await apiFetch(`/api/file/${KIND}/del`, 'POST', { entries: [val], sha: fileSha });
+    allLines = allLines.filter(v => v !== val);
+    selectedSet.delete(val);
+    applyFilter(filterQuery);
+    updateCountBadges(allLines.length);
+    toast(`Silindi (${fmtNum(res.count)} kayıt kaldı)`);
+    await loadFile();
+    setStatus(`Silindi: ${val}`);
+  } catch(err) {
+    toast('Silinemedi: ' + err.message, false);
+    setStatus('Hata: ' + err.message);
+  }
+}
+
+// ── Delete selected entries ───────────────────────────────────────────────────
+async function deleteSelected() {
+  if (selectedSet.size === 0) return;
+  if (!fileSha) { toast('Önce dosya yüklenmeli', false); return; }
+  if (!confirm(`${selectedSet.size} kayıt silinsin mi?`)) return;
+
+  const toDelete = [...selectedSet];
+  setStatus(`${toDelete.length} kayıt siliniyor…`, true);
+  try {
+    const res = await apiFetch(`/api/file/${KIND}/del`, 'POST', {
+      entries: toDelete, sha: fileSha
+    });
+    allLines = allLines.filter(v => !selectedSet.has(v));
+    selectedSet.clear();
+    applyFilter(filterQuery);
+    updateCountBadges(allLines.length);
+    toast(`${res.removed} kayıt silindi (${fmtNum(res.count)} kaldı)`);
+    await loadFile();
+    setStatus(`${res.removed} kayıt silindi`);
+  } catch(err) {
+    toast('Silinemedi: ' + err.message, false);
+    setStatus('Hata: ' + err.message);
+  }
+}
+
+// ── Save all (full file replace) ──────────────────────────────────────────────
+async function saveAll() {
+  if (!fileSha) { toast('Önce dosya yüklenmeli', false); return; }
+  const note = prompt('İsteğe bağlı commit notu:', '') ?? '';
+
+  const btn = document.getElementById('btn-save');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Kaydediliyor…';
+  setStatus('GitHub\'a gönderiliyor…', true);
+  try {
+    const res = await apiFetch(`/api/file/${KIND}`, 'POST', {
+      sha: fileSha, lines: allLines, note
+    });
+    dirty = false;
+    toast(`${fmtNum(res.count)} kayıt kaydedildi`);
+    if (res.rejected && res.rejected.length > 0) {
+      toast(`${res.rejected.length} geçersiz kayıt atlandı`, false);
+    }
+    await loadFile();
+    setStatus('Kaydedildi');
+  } catch(err) {
+    toast('Kayıt hatası: ' + err.message, false);
+    setStatus('Hata: ' + err.message);
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+      <polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/>
+    </svg> GitHub'a Kaydet`;
+  }
+}
+
+// ── Bulk import modal ─────────────────────────────────────────────────────────
+function openBulk()  { document.getElementById('bulk-modal').classList.add('open'); }
+function closeBulk() {
+  document.getElementById('bulk-modal').classList.remove('open');
+  document.getElementById('bulk-ta').value = '';
+}
+function importBulk() {
+  const raw   = document.getElementById('bulk-ta').value;
+  const lines = raw.split(/[\r\n]+/).map(l => l.trim()).filter(Boolean);
+  if (lines.length === 0) { toast('Hiç giriş bulunamadı', false); return; }
+
+  const before = allLines.length;
+  // Add to local array; backend validation happens on save
+  const merged = [...new Set([...allLines, ...lines])].sort();
+  const added  = merged.length - before;
+  allLines = merged;
+  dirty = true;
+  applyFilter(filterQuery);
+  updateCountBadges(allLines.length);
+  closeBulk();
+  toast(`${added} yeni kayıt eklendi (kaydetmek için "GitHub'a Kaydet")`);
+  setStatus(`${added} kayıt eklendi – kaydedilmemiş değişiklikler var`);
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function fmtNum(n) { return n === undefined || n === null ? '–' : Number(n).toLocaleString('tr-TR'); }
+function escRe(s)  { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+function updateCountBadges(n) {
+  document.getElementById(`count-${KIND}`).textContent = fmtNum(n);
+}
+
+function setStatus(msg, loading = false, count = null) {
+  const el = document.getElementById('status-text');
+  el.style.color = loading ? '#818cf8' : '#6b7280';
+  el.textContent = msg;
+}
+function setStatusRight(msg) {
+  document.getElementById('status-right').textContent = msg;
+}
+
+// Warn before leaving with unsaved changes
+window.addEventListener('beforeunload', e => {
+  if (dirty) { e.preventDefault(); e.returnValue = ''; }
+});
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+loadFile();
+loadAllCounts();
+
+// Close bulk modal on backdrop click
+document.getElementById('bulk-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeBulk();
+});
+</script>
+{% endblock %}

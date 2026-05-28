@@ -1,0 +1,70 @@
+name: Fed0gaT – Hourly CTI Update
+
+# Run at minute 0 of every hour, every day
+on:
+  schedule:
+    - cron: "0 * * * *"
+
+  # Allow a manual trigger from the Actions tab (useful for first-time setup)
+  workflow_dispatch:
+
+# The job needs write access to push the updated feed files back to the repo
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    name: Fetch & Rotate Threat Feeds
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      # ── 1. Check out the repo ─────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Persist credentials so the script can git-push without extra config
+          persist-credentials: true
+          fetch-depth: 1
+
+      # ── 2. Python environment ─────────────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install --quiet -r requirements.txt
+
+      # ── 3. Configure git identity ─────────────────────────────────────────
+      - name: Configure git identity
+        run: |
+          git config user.name  "Fed0gaT Bot"
+          git config user.email "bot@fed0gat.local"
+
+      # ── 4. Run the scraper ────────────────────────────────────────────────
+      - name: Run Fed0gaT scraper
+        env:
+          # GITHUB_TOKEN otomatik olarak sağlanır – ekstra secret gerekmez.
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DATA_DIR: feeds
+          GITHUB_ACTIONS: "true"
+
+          # ── Tehdit feed API key'leri (Settings → Secrets → Actions) ──────
+          OTX_API_KEY:          ${{ secrets.OTX_API_KEY }}
+          MALWAREBAZAAR_API_KEY: ${{ secrets.MALWAREBAZAAR_API_KEY }}
+          THREATFOX_API_KEY:    ${{ secrets.THREATFOX_API_KEY }}
+          URLHAUS_API_KEY:      ${{ secrets.URLHAUS_API_KEY }}
+        run: python fed0gat.py
+
+      # ── 5. (Optional) Send a Slack notification on failure ────────────────
+      # Uncomment and add SLACK_WEBHOOK_URL to repository secrets to enable.
+      #
+      # - name: Notify Slack on failure
+      #   if: failure()
+      #   uses: slackapi/slack-github-action@v1
+      #   with:
+      #     payload: '{"text":"⚠️ Fed0gaT hourly run FAILED on ${{ github.repository }}"}'
+      #   env:
+      #     SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

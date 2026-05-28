@@ -1,0 +1,5 @@
+# Fed0gaT runtime dependencies
+# Pin minor versions for reproducible builds; allow patch updates.
+
+requests>=2.31,<3.0
+urllib3>=2.0,<3.0
