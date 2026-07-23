@@ -74,6 +74,7 @@ http://101.35.56.7/zddtxxyxb.zip
 http://101.43.49.183/tcp_linux_amd64
 http://101.53.233.153:53192/Mozi.m
 http://101.58.73.179:9454/i
+http://101.66.20.151:34135/i
 http://101.66.41.204:37027/bin.sh
 http://101.66.43.107:34135/bin.sh
 http://101.66.43.107:34135/i
@@ -188,6 +189,7 @@ http://103.141.5.137:46257/Mozi.7
 http://103.141.5.137:48514/i
 http://103.143.167.155:46548/bin.sh
 http://103.143.167.155:46548/i
+http://103.144.210.195:48375/i
 http://103.149.46.223/pty10
 http://103.149.46.223/pty3
 http://103.149.46.223/pty4
@@ -1823,6 +1825,7 @@ http://110.36.29.73:52831/bin.sh
 http://110.36.29.73:52831/i
 http://110.36.29.73:54770/bin.sh
 http://110.36.29.73:54770/i
+http://110.36.29.73:56138/i
 http://110.36.3.201:33689/i
 http://110.36.3.201:35761/bin.sh
 http://110.36.3.201:35761/i
@@ -2736,6 +2739,8 @@ http://110.37.42.62:58216/bin.sh
 http://110.37.43.119:35442/bin.sh
 http://110.37.43.119:43262/bin.sh
 http://110.37.43.119:43262/i
+http://110.37.43.119:45382/bin.sh
+http://110.37.43.119:45382/i
 http://110.37.43.119:47601/i
 http://110.37.43.119:51326/i
 http://110.37.43.119:57009/bin.sh
@@ -5963,8 +5968,6 @@ http://115.53.222.156:36864/i
 http://115.53.223.106:40356/i
 http://115.53.223.236:33211/bin.sh
 http://115.53.223.236:33211/i
-http://115.53.242.110:36801/bin.sh
-http://115.53.242.110:36801/i
 http://115.53.243.30:49524/bin.sh
 http://115.53.243.30:49524/i
 http://115.53.245.107:51909/bin.sh
@@ -9281,7 +9284,6 @@ http://123.12.41.74:46880/i
 http://123.12.44.123:36330/bin.sh
 http://123.12.44.123:36330/i
 http://123.12.64.160:43876/i
-http://123.12.65.25:37814/bin.sh
 http://123.12.65.25:37814/i
 http://123.12.81.174:53457/bin.sh
 http://123.12.81.174:53457/i
@@ -10239,6 +10241,8 @@ http://123.7.237.214:55722/bin.sh
 http://123.7.237.214:55722/i
 http://123.7.237.43:34417/bin.sh
 http://123.7.237.43:34417/i
+http://123.7.240.199:39194/bin.sh
+http://123.7.240.199:39194/i
 http://123.7.41.11:39506/i
 http://123.7.42.213:48968/bin.sh
 http://123.7.42.213:48968/i
@@ -10988,8 +10992,6 @@ http://125.41.78.164:49290/bin.sh
 http://125.41.78.164:49290/i
 http://125.41.79.73:44691/bin.sh
 http://125.41.79.73:44691/i
-http://125.41.8.146:59616/bin.sh
-http://125.41.8.146:59616/i
 http://125.41.8.156:44972/bin.sh
 http://125.41.8.156:44972/i
 http://125.41.8.228:47846/i
@@ -11159,7 +11161,6 @@ http://125.43.253.40:45300/bin.sh
 http://125.43.253.40:45300/i
 http://125.43.26.64:56438/bin.sh
 http://125.43.26.64:56438/i
-http://125.43.32.245:49758/i
 http://125.43.33.151:52642/bin.sh
 http://125.43.33.151:52642/i
 http://125.43.33.196:39064/bin.sh
@@ -15572,20 +15573,9 @@ http://176.65.139.141/arm5
 http://176.65.139.141/arm6
 http://176.65.139.141/arm7
 http://176.65.139.141/bins/jade.arc
-http://176.65.139.141/bins/jade.arm
-http://176.65.139.141/bins/jade.arm5
-http://176.65.139.141/bins/jade.arm6
-http://176.65.139.141/bins/jade.arm7
 http://176.65.139.141/bins/jade.i686
-http://176.65.139.141/bins/jade.m68k
-http://176.65.139.141/bins/jade.mips
 http://176.65.139.141/bins/jade.mips64
-http://176.65.139.141/bins/jade.mpsl
-http://176.65.139.141/bins/jade.ppc
-http://176.65.139.141/bins/jade.sh4
 http://176.65.139.141/bins/jade.sparc
-http://176.65.139.141/bins/jade.x86
-http://176.65.139.141/bins/jade.x86_64
 http://176.65.139.141/bins/x86
 http://176.65.139.141/bot.exe
 http://176.65.139.141/bot_x86.exe
@@ -15595,7 +15585,6 @@ http://176.65.139.141/m68k
 http://176.65.139.141/mips
 http://176.65.139.141/mipsle
 http://176.65.139.141/mpsl
-http://176.65.139.141/ohshit.sh
 http://176.65.139.141/ppc
 http://176.65.139.141/sh4
 http://176.65.139.141/spc
@@ -17457,6 +17446,7 @@ http://177.70.102.228:8070/TmpFTP/01/Cancelamento/2020-08-06/info.zip
 http://177.70.102.228:8070/TmpFTP/01/Cancelamento/2020-08-24/info.zip
 http://177.70.102.228:8070/TmpFTP/01/Cancelamento/2020-08-25/info.zip
 http://177.70.102.228:8070/TmpFTP/01/Cancelamento/2020-09-03/info.zip
+http://177.70.102.228:8070/TmpFTP/01/Cancelamento/2020-09-08/info.zip
 http://177.70.102.228:8070/TmpFTP/01/Cancelamento/2020-09-29/info.zip
 http://177.70.102.228:8070/TmpFTP/01/Cancelamento/2020-09-30/info.zip
 http://177.70.102.228:8070/TmpFTP/01/Cancelamento/2020-10-03/info.zip
@@ -17808,6 +17798,7 @@ http://177.70.102.228:8070/TmpFTP/01/Carta%20de%20Corre%C3%A7%C3%A3o/2024-02-09/
 http://177.70.102.228:8070/TmpFTP/01/Carta%20de%20Corre%C3%A7%C3%A3o/2024-03-08/info.zip
 http://177.70.102.228:8070/TmpFTP/01/Carta%20de%20Corre%C3%A7%C3%A3o/2024-03-20/info.zip
 http://177.70.102.228:8070/TmpFTP/01/Carta%20de%20Corre%C3%A7%C3%A3o/2024-03-21/info.zip
+http://177.70.102.228:8070/TmpFTP/01/Carta%20de%20Corre%C3%A7%C3%A3o/2024-04-15/info.zip
 http://177.70.102.228:8070/TmpFTP/01/Carta%20de%20Corre%C3%A7%C3%A3o/2024-05-07/info.zip
 http://177.70.102.228:8070/TmpFTP/01/Carta%20de%20Corre%C3%A7%C3%A3o/2024-06-06/info.zip
 http://177.70.102.228:8070/TmpFTP/01/Carta%20de%20Corre%C3%A7%C3%A3o/2024-07-11/info.zip
@@ -18063,6 +18054,7 @@ http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Con
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-01-20/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-01-21/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-01-22/info.zip
+http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-01-23/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-01-25/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-01-26/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-01-27/info.zip
@@ -18095,6 +18087,7 @@ http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Con
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-03-02/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-03-03/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-03-05/info.zip
+http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-03-06/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-03-07/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-03-08/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-03-09/info.zip
@@ -18144,6 +18137,7 @@ http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Con
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-05-05/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-05-08/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-05-10/info.zip
+http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-05-13/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-05-14/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-05-15/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000162/Consulta%20Geral/2025-05-16/info.zip
@@ -18206,6 +18200,7 @@ http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000324/Con
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000324/Consulta%20Geral/2025-03-08/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000324/Consulta%20Geral/2025-03-09/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000324/Consulta%20Geral/2025-03-10/info.zip
+http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000324/Consulta%20Geral/2025-03-11/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000324/Consulta%20Geral/2025-03-12/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000324/Consulta%20Geral/2025-03-14/info.zip
 http://177.70.102.228:8070/TmpFTP/CT-e/Distribui%C3%A7%C3%A3o/02589791000324/Consulta%20Geral/2025-03-17/info.zip
@@ -20587,6 +20582,7 @@ http://181.171.188.254:17418/i
 http://181.193.106.86:38347/bin.sh
 http://181.193.106.86:38347/i
 http://181.193.106.86:57016/i
+http://181.211.15.11:60096/i
 http://181.225.67.10:4849/i
 http://181.48.119.70:40037/.i
 http://181.49.47.190:46516/.i
@@ -22283,8 +22279,6 @@ http://182.126.183.211:52352/bin.sh
 http://182.126.183.211:52352/i
 http://182.126.194.87:46521/bin.sh
 http://182.126.194.87:46521/i
-http://182.126.195.10:53030/bin.sh
-http://182.126.195.10:53030/i
 http://182.126.195.14:43376/bin.sh
 http://182.126.195.14:43376/i
 http://182.126.196.182:37174/bin.sh
@@ -23191,11 +23185,11 @@ http://185.50.148.169:51605/i
 http://185.50.148.169:54311/bin.sh
 http://185.50.148.169:57543/bin.sh
 http://185.57.69.125:16138/Mozi.m
-http://185.57.69.125:16138/i
 http://185.60.107.150:8080/
 http://185.61.138.193/help/botlogger.php
 http://185.63.101.180:8081/sshd
 http://185.71.233.23:8000/
+http://185.71.69.198:34190/i
 http://185.76.78.13:8080/pty10
 http://185.76.78.13:8080/pty3
 http://185.76.78.13:8080/pty4
@@ -23695,6 +23689,7 @@ http://190.115.114.38:8080/
 http://190.115.80.35:49166/bin.sh
 http://190.115.80.35:49166/i
 http://190.12.99.194:28516/
+http://190.12.99.194:28516/.i
 http://190.12.99.194:28516/i
 http://190.128.195.138:50368/
 http://190.128.195.138:50368/.i
@@ -24454,6 +24449,7 @@ http://196.190.224.62:42172/bin.sh
 http://196.190.224.62:42172/i
 http://196.190.224.62:59429/bin.sh
 http://196.190.224.62:59429/i
+http://196.190.228.108:53676/bin.sh
 http://196.190.229.115:35148/bin.sh
 http://196.190.229.115:35148/i
 http://196.190.69.149:38118/bin.sh
@@ -25431,6 +25427,7 @@ http://202.131.244.202:30068/i
 http://202.139.20.12:1125/sshd
 http://202.141.101.239:37360/Mozi.a
 http://202.148.5.34:35700/.i
+http://202.148.5.34:35700/i
 http://202.153.193.73/images/kong.jpg
 http://202.153.193.73/images/phonedpp.jpg
 http://202.155.8.56/BVNS
@@ -25483,6 +25480,7 @@ http://202.5.50.108:15808/.i
 http://202.5.50.108:15808/i
 http://202.51.100.238:30425/i
 http://202.53.164.214:17211/.i
+http://202.53.164.214:17211/i
 http://202.53.164.90:5465/.i
 http://202.57.43.234:19001/tftp
 http://202.59.90.109:62207/i
@@ -28960,7 +28958,6 @@ http://27.207.189.51:54117/bin.sh
 http://27.207.189.51:54117/i
 http://27.207.190.200:59116/bin.sh
 http://27.207.190.200:59116/i
-http://27.207.213.78:33217/i
 http://27.207.225.33:35214/bin.sh
 http://27.207.225.33:35214/i
 http://27.207.225.43:40906/bin.sh
@@ -29349,7 +29346,6 @@ http://27.37.101.250:45794/bin.sh
 http://27.37.101.71:58452/bin.sh
 http://27.37.101.71:58452/i
 http://27.37.101.71:60470/i
-http://27.37.101.83:48949/i
 http://27.37.101.86:59660/Mozi.m
 http://27.37.101.86:59660/bin.sh
 http://27.37.101.86:59660/i
@@ -31364,6 +31360,8 @@ http://42.226.69.32:57626/i
 http://42.226.70.169:33705/bin.sh
 http://42.226.70.169:33705/i
 http://42.226.70.199:34323/i
+http://42.226.70.39:48349/bin.sh
+http://42.226.70.39:48349/i
 http://42.226.71.20:42571/bin.sh
 http://42.226.71.20:42571/i
 http://42.226.71.214:43828/bin.sh
@@ -31716,7 +31714,6 @@ http://42.229.217.39:42738/bin.sh
 http://42.229.217.39:42738/i
 http://42.229.217.60:53381/bin.sh
 http://42.229.217.60:53381/i
-http://42.229.218.145:40175/bin.sh
 http://42.229.218.145:40175/i
 http://42.229.218.157:35202/bin.sh
 http://42.229.218.157:35202/i
@@ -32070,7 +32067,6 @@ http://42.232.233.216:51884/i
 http://42.232.233.56:45959/bin.sh
 http://42.232.233.56:45959/i
 http://42.232.234.127:37711/bin.sh
-http://42.232.234.127:37711/i
 http://42.232.234.232:36131/i
 http://42.232.235.165:50144/i
 http://42.232.235.206:48692/bin.sh
@@ -32454,6 +32450,7 @@ http://42.237.19.116:51129/i
 http://42.237.20.223:35077/bin.sh
 http://42.237.20.223:35077/i
 http://42.237.20.68:51129/i
+http://42.237.20.8:42542/i
 http://42.237.21.105:39637/bin.sh
 http://42.237.21.105:39637/i
 http://42.237.21.210:48286/bin.sh
@@ -36871,7 +36868,6 @@ http://5.77.24.7:52490/i
 http://5.78.73.122:81/private/bins.sh
 http://5.78.73.122:81/private/bins_py.sh
 http://5.78.73.122:81/private/python3.6
-http://5.79.147.245:47869/i
 http://5.83.134.26/arc
 http://5.83.134.26/arm
 http://5.83.134.26/arm4
@@ -37915,7 +37911,6 @@ http://61.52.103.112:59902/bin.sh
 http://61.52.103.112:59902/i
 http://61.52.104.230:40878/i
 http://61.52.105.63:46173/bin.sh
-http://61.52.105.63:46173/i
 http://61.52.106.113:35206/bin.sh
 http://61.52.106.113:35206/i
 http://61.52.106.147:34515/i
@@ -40139,6 +40134,7 @@ http://77.247.88.90:60854/i
 http://77.39.19.233:52424/i
 http://77.46.170.18:53326/Mozi.m
 http://77.46.170.18:53326/i
+http://77.50.222.238:51680/.i
 http://77.50.222.238:51680/i
 http://77.53.231.107:49605/bin.sh
 http://77.53.231.107:49605/i
@@ -40217,6 +40213,7 @@ http://78.13.245.82/bins/scanListen
 http://78.153.140.16/a.sh
 http://78.153.140.16/busybox
 http://78.153.140.16/curl-aarch64
+http://78.153.140.16/curl-amd64
 http://78.153.140.16/for
 http://78.153.140.16/i.sh
 http://78.153.140.16/kinsing
@@ -40384,6 +40381,7 @@ http://80.14.38.66:1081//sshd
 http://80.14.38.66:1081/sshd
 http://80.147.155.189/AV.lnk
 http://80.147.155.189/Photo.lnk
+http://80.147.155.189/Photo.scr
 http://80.147.155.189/Video.lnk
 http://80.147.155.189/Video.scr
 http://80.147.3.138:88/
@@ -51125,7 +51123,6 @@ https://bl7gsqjt.parsgoal90.com/?ublib=034c46cf-7fc1-4dca-897f-a6ad0a20162c
 https://blankeyeo.com/Hinda/Arabelle/Mirabella/Dinah/Staci?Theresa=Benni_rp
 https://blaold.indebud.hu/62dae79e-0693-4df3-9fec-ff4c8aefef69
 https://blessdayservices.org/up/
-https://bleu-1.archit-physiol.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://bleu-2.sylo3mer.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://bleu-2k.bexla8rin.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://bleu-3.dexis-serv.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
@@ -51170,7 +51167,6 @@ https://blue-paper-f69f.acrypters.workers.dev/FTM0-40PO-AO28-G98E/img_zsykvq.png
 https://blue-paper-f69f.acrypters.workers.dev/ISWC-MFIX-CRIY-CJGW/img_4drkah.png
 https://blue-paper-f69f.acrypters.workers.dev/J0YH-KEUX-J9ID-2I7M/img_n0x6bn.png
 https://blue-paper-f69f.acrypters.workers.dev/J0YH-KEUX-J9ID-2I7M/img_ozliwt.png
-https://blue-star-2m.ales1ine.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://blue.brightreef.surf/9fd51fb7-b3ad-4c8f-bf05-b5423d14e06c/user_6747.google
 https://blue.brightskyway.lat/9fd51fb7-b3ad-4c8f-bf05-b5423d14e06c/user_6747.google
 https://blue.clogg-opposition.surf/9fd51fb7-b3ad-4c8f-bf05-b5423d14e06c/user_6747.google
@@ -53302,7 +53298,6 @@ https://faogw.bankefile.com/220a1e0a-0e20-4915-9d41-5e83b72a69c8
 https://faqgkjb.testmobo.ir/fe88f376-699d-4523-91e6-6241f9000c27
 https://fast-1.bexla8rin.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://fast-7.mivon-data.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
-https://fast-berg-4.archit-physiol.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://fast-fire-5.rax7pavel.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://fast-fire-9.raxen-serv.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://fast-land-9c.excavat-toponym.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
@@ -53944,8 +53939,6 @@ https://github.com/AkashnilRecovered/Text-Formatting-Crash-Course/releases/downl
 https://github.com/AkashnilRecovered/Text-Formatting-Crash-Course/releases/download/v2.0/Software.zip
 https://github.com/Alejandro5486/InfestusWebApp/releases/download/v1.0/Software.zip
 https://github.com/Alsooory/Svg-Templates/releases/download/v1.0/Software.zip
-https://github.com/Alyasdz/STM32-OLED-I2C-HAL-Coding-Method/raw/refs/heads/main/Drivers/CMSIS/Device/ST/ST_HA_Coding_Method_OLE_v3.3.zip
-https://github.com/Alyasdz/alyasdz.github.io/raw/refs/heads/main/primulic/io_alyasdz_github_v1.2.zip
 https://github.com/Ander12342/pugdns/releases/download/1.3.1/pugdns_v1.3.1.zip
 https://github.com/Anno29/web/raw/refs/heads/main/Software.zip
 https://github.com/Antonio12gkn71/underlayer/releases/download/v1.0/Application.zip
@@ -54010,8 +54003,6 @@ https://github.com/ColtOSTemp/platform_external_tinyxml/releases/download/v1.0/A
 https://github.com/ColtOSTemp/platform_external_tinyxml/releases/download/v2.0/Software.zip
 https://github.com/Commutertrafficfarsi309/Qclaw-old
 https://github.com/Commutertrafficfarsi309/Qclaw-old/raw/refs/heads/main/Fasciolidae/Qclaw_old_v1.2.zip
-https://github.com/Craftmesut/craftmesut.github.io/raw/refs/heads/main/yuca/craftmesut_github_io_v1.8-beta.1.zip
-https://github.com/Craftmesut/geanos-scene-optimizer/raw/refs/heads/main/styles/optimizer-scene-geanos-keenly.zip
 https://github.com/CronusXd/Update/releases/download/programa/Universal.Cheat.All.Games.rar
 https://github.com/Da2dalus/LOIC/raw/refs/heads/master/LOIC.exe
 https://github.com/Da2dalus/The-MALWARE-Repo/raw/refs/heads/master/Ransomware/WannaCry.exe
@@ -54157,9 +54148,6 @@ https://github.com/MannKalariya/BO6-SecretLoadouts/raw/refs/heads/main/stepbroth
 https://github.com/MannKalariya/Digital-Resume-Builder/raw/refs/heads/main/public/Digital-Builder-Resume-predramatic.zip
 https://github.com/MannKalariya/Portfoilio/raw/refs/heads/main/.vscode/Software-1.9.zip
 https://github.com/MannKalariya/powersub-demo-1078/raw/refs/heads/main/shufflingly/demo_powersub_v2.0.zip
-https://github.com/Maplecoder18/Qwen3-VL-Embedding/raw/refs/heads/main/scripts/evaluation/mmeb_v2/Qwen-V-Embedding-v3.0.zip
-https://github.com/Maplecoder18/game/raw/refs/heads/main/reputed/Software-v1.8-alpha.4.zip
-https://github.com/Maplecoder18/maplecoder18.github.io/raw/refs/heads/main/flaky/maplecoder_io_github_v2.5.zip
 https://github.com/MaybeDesxie7/cracked-webpage-annotator-extension/raw/refs/heads/main/decrepitation/cracked-annotator-webpage-extension-2.1-beta.4.zip
 https://github.com/MazaCoin/maza/releases/download/v0.16.3/maza-0.16.3-osx-unsigned.dmg
 https://github.com/MazaCoin/maza/releases/download/v0.16.3/maza-0.16.3-win32-setup-unsigned.exe
@@ -54683,8 +54671,6 @@ https://github.com/mehedihasanfarabi10/ui-package-email-verify/releases/download
 https://github.com/mehedihasanfarabi10/ui-package-email-verify/releases/download/v2.0/Software.zip
 https://github.com/merosegamerx/pizza_webapp/releases/download/v1.0/Software.zip
 https://github.com/merosegamerx/pizza_webapp/releases/download/v2.0/Software.zip
-https://github.com/mhmdoafv/SwiftEmoji/raw/refs/heads/main/Sources/SwiftEmojiIndex/DataSource/Swift-Emoji-1.9-beta.3.zip
-https://github.com/mhmdoafv/mhmdoafv.github.io/raw/refs/heads/main/cephalhematoma/github-io-mhmdoafv-1.6.zip
 https://github.com/midkourtbbe/network/raw/refs/heads/main/Software.zip
 https://github.com/miguel-b-p/..../raw/main/WinRing0x64.sys
 https://github.com/mikf/gallery-dl/releases/download/v1.15.0/gallery-dl.exe
@@ -54722,8 +54708,6 @@ https://github.com/officedesknote-star/bodakuwa/raw/refs/heads/main/ScreenConnec
 https://github.com/officedesknote-star/bzeet/raw/refs/heads/main/ScreenConnect.ClientSetup%20(25).msi
 https://github.com/officedesknote-star/bzeett/raw/refs/heads/main/ScreenConnect.ClientSetup%20(20)%20(1).msi
 https://github.com/officedesknote-star/sww/raw/refs/heads/main/ScreenConnect.ClientSetup%20(19)%20(2).msi
-https://github.com/ojamesalaba93/bloom/raw/refs/heads/main/packages/bloom/Software-2.4.zip
-https://github.com/ojamesalaba93/ojamesalaba93.github.io/raw/refs/heads/main/stormward/io_ojamesalaba_github_v2.1.zip
 https://github.com/okesing/neergz-web-app/raw/refs/heads/main/canel/app-neergz-web-v2.9.zip
 https://github.com/onastroll-2000f5n/5vcye/releases/download/v1.2/Launcher.zip
 https://github.com/ordogos2/g575/releases/download/Download/setup.7.0.zip
@@ -54775,8 +54759,6 @@ https://github.com/qouzk/now.gg-roblox-in-browser/raw/refs/heads/main/Nazaritic/
 https://github.com/quynh814/teaFiBot/releases/download/v1.0/Software.zip
 https://github.com/quynh814/teaFiBot/releases/download/v2.0/Software.zip
 https://github.com/r00tnik8/zianr35524869492586/raw/refs/heads/main/plugin3.plg
-https://github.com/raditpasy25/AWS-Serverless-ELT-Pipeline/raw/refs/heads/main/infra/terraform/modules/lambda_event_source_mapping/Serverless_Pipeline_AW_EL_v3.5-beta.5.zip
-https://github.com/raditpasy25/raditpasy25.github.io/raw/refs/heads/main/degradement/github-raditpasy-io-2.5.zip
 https://github.com/rajendra2604/Kanban-for-AI-Agents/raw/refs/heads/main/amphitheatrically/Agents_for_A_Kanban_1.5.zip
 https://github.com/rajendra2604/Kanban-for-AI-Agents/raw/refs/heads/main/amphitheatrically/Kanban-Agents-A-for-3.7.zip
 https://github.com/rajendra2604/rajendra2604.github.io/raw/refs/heads/main/hypereutectoid/io-github-rajendra-collectivize.zip
@@ -54935,9 +54917,6 @@ https://github.com/tiiisiet65-sudo/adawcacaw/raw/refs/heads/main/test_portable2.
 https://github.com/tiiisiet65-sudo/e/raw/refs/heads/main/Confidential_Report.exe
 https://github.com/tiiisiet65-sudo/e/raw/refs/heads/main/document.hta
 https://github.com/tiiisiet65-sudo/rtyui/raw/refs/heads/main/Csharp-Version/Mango.lnk
-https://github.com/timiallen/laravael-ui-dashboard/raw/refs/heads/main/resources/views/pages/laravel/ui-laravael-dashboard-vitamer.zip
-https://github.com/timiallen/simple-calculator/raw/refs/heads/master/node_modules/get-intrinsic/.github/calculator_simple_v1.3.zip
-https://github.com/timiallen/space-project/raw/refs/heads/master/home/project-space-3.2.zip
 https://github.com/toanminh2004/Fixing-Error-0x80070424-Specified-Service/releases/download/v2.0/Software.zip
 https://github.com/toanminh2004/duan1/releases/download/v2.0/Software.zip
 https://github.com/toe2132313/Zorvex-CAT/releases/download/v1.0/Software.zip
@@ -55171,7 +55150,6 @@ https://godww.accredit.hu/62cb720d-ab04-49ec-a37f-bef1a8d65c4e
 https://gofq.phtaxiservices.com/f0ae0c7b-a8b1-469d-ba4f-ef250b9fd053
 https://gogolfonline.com/zira-miszsn.exe
 https://gold-2.excavat-toponym.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
-https://gold-5.archit-physiol.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://gold-land-3.tal4miren.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://gold-land-3m.rax7pavel.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://gold-land-4m.raxen-serv.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
@@ -55366,7 +55344,6 @@ https://haus-1.cicada-tkacki.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://haus-1.dexon-tech.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://haus-1.mivon-tech.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://haus-1.sylo3mer.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
-https://haus-2.archit-physiol.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://haus-2x.sylor-plus.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://haus-3.bexla8rin.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://haus-3.miv8soren.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
@@ -57131,7 +57108,6 @@ https://iron-fire-6s.noven-hub.in.net/cdk-msdn-3457325-null/load-file0dsdf567.ch
 https://iron-fire-6s.novis-data.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://iron-land-1q.zex1liron.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://iron-land-9q.zexis-host.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
-https://iron-mond-7x.archit-physiol.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://iron-star-2n.caissonnarc0m.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://iron.cryptobase.surf/9fd51fb7-b3ad-4c8f-bf05-b5423d14e06c/user_6747.google
 https://iron.sculpture5traight.surf/9fd51fb7-b3ad-4c8f-bf05-b5423d14e06c/user_6747.google
@@ -57568,7 +57544,6 @@ https://kaleda.pro/69733be4.exe
 https://kaleda.pro/96de8ea9.exe
 https://kaleda.pro/d7b5970c.exe
 https://kaloed.pro/1e523332.exe
-https://kalt-4.ales1ine.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://kalt-5.nov2liren.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://kalt-5.noven-hub.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://kalt-5.novis-data.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
@@ -60500,8 +60475,6 @@ https://raw.githubusercontent.com/Alpinismsecondperson704/fijahu-13/main/cervisi
 https://raw.githubusercontent.com/Alvgon/SwagLabs-Playwright-Java/main/src/test/java/com/Java-Playwright-Swag-Labs-v1.0.zip
 https://raw.githubusercontent.com/Alvin1231231231/ty/main/docs/features/screenshots/Software_3.8-alpha.3.zip
 https://raw.githubusercontent.com/Alxsea04/AI-Tone-Changer/main/metaphosphorous/Changer_Tone_A_2.1-beta.4.zip
-https://raw.githubusercontent.com/Alyasdz/STM32-OLED-I2C-HAL-Coding-Method/refs/heads/main/Drivers/CMSIS/Device/ST/ST_HA_Coding_Method_OLE_v3.3.zip
-https://raw.githubusercontent.com/Alyasdz/alyasdz.github.io/refs/heads/main/primulic/io_alyasdz_github_v1.2.zip
 https://raw.githubusercontent.com/Alzoube103/openkit/main/examples/styles/Software_v3.2.zip
 https://raw.githubusercontent.com/Amaan78614/codegraphtheory/main/Pleurobrachiidae/Software-v3.2.zip
 https://raw.githubusercontent.com/AmaleedQ/fyi/main/test/fyi/web/Software-v3.7-beta.1.zip
@@ -60842,8 +60815,6 @@ https://raw.githubusercontent.com/Cornsugarkenyan978/kuma-theme-cyber-neon/main/
 https://raw.githubusercontent.com/Corryrevokable963/claude-code-book/main/throatily/claude_book_code_v3.5.zip
 https://raw.githubusercontent.com/Corymbonagraceae706/GitHub-Dota-2-Skin-Changer-Lightweight-Free-One-Click-Apply/main/yelp/Hub_Apply_Git_Dota_Lightweight_One_Free_Changer_Skin_Click_v2.0.zip
 https://raw.githubusercontent.com/Costenar0/miaozhu/main/frontend/src/api/Software-1.0.zip
-https://raw.githubusercontent.com/Craftmesut/craftmesut.github.io/refs/heads/main/yuca/craftmesut_github_io_v1.8-beta.1.zip
-https://raw.githubusercontent.com/Craftmesut/geanos-scene-optimizer/refs/heads/main/styles/optimizer-scene-geanos-keenly.zip
 https://raw.githubusercontent.com/Crashgreen444/ShadowPixel-Gaming-Club/main/resources/Shadow_Gaming_Pixel_Club_v1.3.zip
 https://raw.githubusercontent.com/Crayz916/prediction-market-arbitrage-bot/main/test/market-arbitrage-bot-prediction-v2.0.zip
 https://raw.githubusercontent.com/CreativeDep/Virtual-VHS_Website/main/subocean/VH-Virtual-Website-v3.8.zip
@@ -61806,9 +61777,6 @@ https://raw.githubusercontent.com/MannKalariya/powersub-demo-1078/refs/heads/mai
 https://raw.githubusercontent.com/ManojkumarMangalore/Qwen-Image-Edit-2509-LoRAs-Fast/main/qwenimage/Edit_Qwen_Image_Fast_As_R_Lo_v2.3.zip
 https://raw.githubusercontent.com/ManuG11/plugin-health-monitor/main/languages/health_monitor_plugin_v2.0.zip
 https://raw.githubusercontent.com/Manueleue/video-audit-platform/main/Pepysian/platform-audit-video-v3.4.zip
-https://raw.githubusercontent.com/Maplecoder18/Qwen3-VL-Embedding/refs/heads/main/scripts/evaluation/mmeb_v2/Qwen-V-Embedding-v3.0.zip
-https://raw.githubusercontent.com/Maplecoder18/game/refs/heads/main/reputed/Software-v1.8-alpha.4.zip
-https://raw.githubusercontent.com/Maplecoder18/maplecoder18.github.io/refs/heads/main/flaky/maplecoder_io_github_v2.5.zip
 https://raw.githubusercontent.com/Maraboustorkouterplanet353/MGSpatialSelectionDemo/main/Content/__ExternalActors__/TopDown/Lvl_TopDown/9/BG/MG_Spatial_Demo_Selection_v3.3.zip
 https://raw.githubusercontent.com/Maranh0/ai-junior-data_scientist/main/data_tools/scientist_data_junior_ai_3.6.zip
 https://raw.githubusercontent.com/Marashumpo/browserclaw/main/src/Software-3.7-alpha.1.zip
@@ -64561,8 +64529,6 @@ https://raw.githubusercontent.com/mezoali100/exforum-auto-poster/main/psychopath
 https://raw.githubusercontent.com/mfaqih202101/vscode-clear-ui-settings/main/pledgor/vscode-ui-clear-settings-1.1.zip
 https://raw.githubusercontent.com/mhdFarvis02/go-sqlite-htmx/main/ui/static/js/htmx-sqlite-go-3.3.zip
 https://raw.githubusercontent.com/mhdee740/insurance-charges-prediction-linear-regression/main/boorishness/regression_linear_prediction_charges_insurance_3.1.zip
-https://raw.githubusercontent.com/mhmdoafv/SwiftEmoji/refs/heads/main/Sources/SwiftEmojiIndex/DataSource/Swift-Emoji-1.9-beta.3.zip
-https://raw.githubusercontent.com/mhmdoafv/mhmdoafv.github.io/refs/heads/main/cephalhematoma/github-io-mhmdoafv-1.6.zip
 https://raw.githubusercontent.com/michae6543/OT-CRM/main/Backend/src/util/CRM_O_v2.4.zip
 https://raw.githubusercontent.com/michel-angelo/IntRR/main/src/modules/clustering/RR_Int_1.7.zip
 https://raw.githubusercontent.com/michusSq/configguard/main/src/configguard/explain/Software-3.4.zip
@@ -64858,8 +64824,6 @@ https://raw.githubusercontent.com/ogthheu/Insightify-Sentiment-API/main/sample_d
 https://raw.githubusercontent.com/ohiostateuniversitypulmonaryvalve996/vpskit/main/docs/Software-1.6-beta.5.zip
 https://raw.githubusercontent.com/ohmanilove2/thanksgiving-tech-gadgets-sale/main/assets/sale_thanksgiving_gadgets_tech_1.0-beta.2.zip
 https://raw.githubusercontent.com/oilofvitriolcongealment582/trustless_bridge/main/negotiate/trustless_bridge_1.0.zip
-https://raw.githubusercontent.com/ojamesalaba93/bloom/refs/heads/main/packages/bloom/Software-2.4.zip
-https://raw.githubusercontent.com/ojamesalaba93/ojamesalaba93.github.io/refs/heads/main/stormward/io_ojamesalaba_github_v2.1.zip
 https://raw.githubusercontent.com/okefonok/GoTween/main/GoTween/Tween-Go-1.8.zip
 https://raw.githubusercontent.com/okelloaliwa01/ts-stack/main/src/generator/client/ts_stack_v2.1.zip
 https://raw.githubusercontent.com/okesing/neergz-web-app/main/canel/app-neergz-web-v2.9.zip
@@ -65040,8 +65004,6 @@ https://raw.githubusercontent.com/ra7701/aulite/main/dashboard/src/lib/Software_
 https://raw.githubusercontent.com/rabsharpeared662/OpenChat/main/backend/OpenChat.Infrastructure/Open_Chat_1.8.zip
 https://raw.githubusercontent.com/rach390/rest-gateway-1771929895-4/main/pkg/rest_gateway_v2.6.zip
 https://raw.githubusercontent.com/rachaellaboring846/micracode/main/dihydrol/Software_1.4.zip
-https://raw.githubusercontent.com/raditpasy25/AWS-Serverless-ELT-Pipeline/refs/heads/main/infra/terraform/modules/lambda_event_source_mapping/Serverless_Pipeline_AW_EL_v3.5-beta.5.zip
-https://raw.githubusercontent.com/raditpasy25/raditpasy25.github.io/refs/heads/main/degradement/github-raditpasy-io-2.5.zip
 https://raw.githubusercontent.com/rahmoundll/KAK/main/glew64.dll
 https://raw.githubusercontent.com/raihan32122/MSI-Wrapper-Pro-Latest-Patch/main/pertinently/Wrapper-Latest-Pro-Patch-MS-v3.9-alpha.5.zip
 https://raw.githubusercontent.com/rajarshi-baral-2107/test2/main/unimpeachably/test_2.8.zip
@@ -65737,9 +65699,6 @@ https://raw.githubusercontent.com/tiiisiet65-sudo/rtyui/refs/heads/main/restore-
 https://raw.githubusercontent.com/tiiisiet65-sudo/rtyui/refs/heads/main/test_cache.cmd
 https://raw.githubusercontent.com/tiiisiet65-sudo/rtyui/refs/heads/main/test_cache2.cmd
 https://raw.githubusercontent.com/tildaknifelike3834/pypi-security-best-practices/main/reprobator/practices_best_security_pypi_v2.7.zip
-https://raw.githubusercontent.com/timiallen/laravael-ui-dashboard/refs/heads/main/resources/views/pages/laravel/ui-laravael-dashboard-vitamer.zip
-https://raw.githubusercontent.com/timiallen/simple-calculator/refs/heads/master/node_modules/get-intrinsic/.github/calculator_simple_v1.3.zip
-https://raw.githubusercontent.com/timiallen/space-project/refs/heads/master/home/project-space-3.2.zip
 https://raw.githubusercontent.com/timlfg/NEWS-Chatbot/main/scripts/NEW_Chatbot_2.8-beta.2.zip
 https://raw.githubusercontent.com/timmyunplayable214/bus-ticket-booking/main/submissly/ticket_booking_bus_2.3-beta.5.zip
 https://raw.githubusercontent.com/timo3mk/Hangman-game/main/logic/Hangman_game_2.0.zip
@@ -66940,7 +66899,6 @@ https://soft-4.dex2lavel.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://soft-5.vok7laren.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://soft-berg-6p.dex1lavel.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://soft-berg-9.mivis-net.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
-https://soft-fire-6q.archit-physiol.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://soft-land-1.nov2liren.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://soft-land-1.noven-hub.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://soft-land-1.novis-data.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
@@ -69507,7 +69465,6 @@ https://zeiqv2hk.subfossiloakchronology.digital/?ublib=ecacb7ad-6ce3-450b-9d6e-0
 https://zeit-1.excavat-toponym.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://zeit-2.rax7pavel.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://zeit-5.raxen-serv.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
-https://zeit-9.ales1ine.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://zeit-berg-4n.nov2liren.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://zeit-berg-8.noven-hub.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
 https://zeit-berg-8.novis-data.in.net/cdk-msdn-3457325-null/load-file0dsdf567.chk
