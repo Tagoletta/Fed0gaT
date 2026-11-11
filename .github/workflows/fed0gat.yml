@@ -52,10 +52,8 @@ jobs:
           GITHUB_ACTIONS: "true"
 
           # ── Tehdit feed API key'leri (Settings → Secrets → Actions) ──────
+          ABUSECH_AUTH_KEY:     ${{ secrets.ABUSECH_AUTH_KEY }}
           OTX_API_KEY:          ${{ secrets.OTX_API_KEY }}
-          MALWAREBAZAAR_API_KEY: ${{ secrets.MALWAREBAZAAR_API_KEY }}
-          THREATFOX_API_KEY:    ${{ secrets.THREATFOX_API_KEY }}
-          URLHAUS_API_KEY:      ${{ secrets.URLHAUS_API_KEY }}
         run: python fed0gat.py
 
       # ── 5. (Optional) Send a Slack notification on failure ────────────────

@@ -289,6 +289,11 @@ class FeedFetcher:
                     result.error = f"{source.api_key_env} not set"
                     return result
 
+            # Template auth key into URL path (abuse.ch v2 exports)
+            url = source.url
+            if api_key and "{auth_key}" in url:
+                url = url.replace("{auth_key}", api_key)
+
             # Build auth headers (header-level authentication, e.g. OTX)
             extra_headers: Dict[str, str] = {}
             if api_key and source.api_key_header:
@@ -299,9 +304,9 @@ class FeedFetcher:
                 body = dict(source.post_body)
                 if api_key and source.api_key_body:
                     body[source.api_key_body] = api_key
-                raw = self._http.post(source.url, body, extra_headers)
+                raw = self._http.post(url, body, extra_headers)
             else:
-                raw = self._http.get(source.url, extra_headers)
+                raw = self._http.get(url, extra_headers)
 
             entries = self._parse(raw, source)
             result.entries = entries
