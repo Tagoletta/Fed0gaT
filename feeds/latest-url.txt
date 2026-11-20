@@ -976,6 +976,8 @@ http://110.138.189.142:53741/i
 http://110.138.76.244:49343/bin.sh
 http://110.138.8.55:47040/bin.sh
 http://110.138.8.55:47040/i
+http://110.166.202.146:53235/bin.sh
+http://110.166.202.146:53235/i
 http://110.178.50.71:58995/bin.sh
 http://110.178.50.71:58995/i
 http://110.186.228.185:42394/bin.sh
@@ -1510,6 +1512,7 @@ http://115.196.1.57:38725/i
 http://115.196.76.174:58475/i
 http://115.197.33.158:47845/bin.sh
 http://115.197.65.155:60542/bin.sh
+http://115.197.65.155:60542/i
 http://115.204.237.46:37916/i
 http://115.205.74.157:36227/bin.sh
 http://115.205.74.157:36227/i
@@ -1570,6 +1573,8 @@ http://115.48.152.88:60972/i
 http://115.48.160.185:37342/bin.sh
 http://115.48.160.185:37342/i
 http://115.48.160.26:57925/i
+http://115.48.160.93:33690/bin.sh
+http://115.48.160.93:33690/i
 http://115.48.162.174:37342/bin.sh
 http://115.48.162.174:37342/i
 http://115.48.163.143:57925/bin.sh
@@ -3277,6 +3282,7 @@ http://123.4.196.160:56023/bin.sh
 http://123.4.196.160:56023/i
 http://123.4.198.78:44266/bin.sh
 http://123.4.198.78:44266/i
+http://123.4.207.248:42038/bin.sh
 http://123.4.213.181:54962/bin.sh
 http://123.4.213.181:54962/i
 http://123.4.234.234:60550/bin.sh
@@ -3847,6 +3853,7 @@ http://125.45.64.218:44500/bin.sh
 http://125.45.64.218:44500/i
 http://125.45.64.243:57769/bin.sh
 http://125.45.64.243:57769/i
+http://125.45.65.171:53462/bin.sh
 http://125.45.65.31:54682/bin.sh
 http://125.45.65.31:54682/i
 http://125.45.66.47:52555/bin.sh
@@ -3884,6 +3891,7 @@ http://125.46.224.209:39375/i
 http://125.46.245.25:44216/bin.sh
 http://125.46.245.25:44216/i
 http://125.46.246.16:44216/i
+http://125.46.247.242:51919/i
 http://125.47.109.181:53336/bin.sh
 http://125.47.109.181:53336/i
 http://125.47.114.40:58007/bin.sh
@@ -6216,6 +6224,7 @@ http://182.113.44.41:34830/i
 http://182.113.47.226:56441/i
 http://182.113.6.116:33465/bin.sh
 http://182.113.6.116:33465/i
+http://182.113.7.131:36662/i
 http://182.113.73.156:40501/i
 http://182.113.92.115:55573/i
 http://182.113.93.113:55573/bin.sh
@@ -9673,6 +9682,7 @@ http://221.1.224.94:53148/i
 http://221.1.226.234:44072/bin.sh
 http://221.1.227.179:38509/bin.sh
 http://221.1.227.179:38509/i
+http://221.1.227.97:43407/bin.sh
 http://221.1.246.165:37934/bin.sh
 http://221.1.246.165:37934/i
 http://221.1.246.89:51464/bin.sh
@@ -10019,6 +10029,7 @@ http://222.139.121.152:50699/i
 http://222.139.193.14:42965/i
 http://222.139.193.14:57650/bin.sh
 http://222.139.193.14:57650/i
+http://222.139.199.251:54687/bin.sh
 http://222.139.199.251:54687/i
 http://222.139.204.189:51951/bin.sh
 http://222.139.204.189:51951/i
@@ -10476,6 +10487,7 @@ http://27.215.213.185:38678/i
 http://27.215.215.161:34128/bin.sh
 http://27.215.215.161:34128/i
 http://27.215.215.163:59280/bin.sh
+http://27.215.215.163:59280/i
 http://27.215.24.28:44720/bin.sh
 http://27.215.24.28:44720/i
 http://27.215.32.89:49990/Mozi.m
@@ -14615,6 +14627,15 @@ http://92.119.165.164/p-p.c-.Sakura
 http://92.119.165.164/s-h.4-.Sakura
 http://92.119.165.164/x-3.2-.Sakura
 http://92.119.165.164/x-8.6-.Sakura
+http://92.119.178.59:8988/?a=a32&h=92.119.178.59&t=ws_&p=8988
+http://92.119.178.59:8988/?a=a64&h=92.119.178.59&t=ws_&p=8988
+http://92.119.178.59:8988/?a=l32&h=92.119.178.59&t=ws_&p=8988
+http://92.119.178.59:8988/?a=l64&h=92.119.178.59&t=ws_&p=8988
+http://92.119.178.59:8988/?h=92.119.178.59&p=8988&t=ws&a=a32&stage=true
+http://92.119.178.59:8988/?h=92.119.178.59&p=8988&t=ws&a=a64&stage=true
+http://92.119.178.59:8988/?h=92.119.178.59&p=8988&t=ws&a=l32&stage=true
+http://92.119.178.59:8988/?h=92.119.178.59&p=8988&t=ws&a=l64&stage=true
+http://92.119.178.59:8988/slw
 http://92.248.162.165:42419/i
 http://92.248.175.43:57566/bin.sh
 http://92.63.88.87:8080/bt/get.php
@@ -15127,6 +15148,8 @@ http://casasmediterraneas.com/wp-content/plugins/linux.bin
 http://cashbacks.speciallshop.com/
 http://cdi.indiadigest.in:443
 http://cdi.indiadigest.in:53
+http://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/07f3bc3b-859c-46fd-8dcf-86c95205fd2c
+http://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/c291b941-d316-415c-9dff-66e4896c0bd4
 http://chaomoinguoi.duckdns.org:8080/loader.sh
 http://chaomoinguoi.duckdns.org:8080/main_arm
 http://chaomoinguoi.duckdns.org:8080/main_arm5
@@ -16774,16 +16797,24 @@ https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/160a8fe2-b7d5-4f75-ad77-7cdf6c6825cc?
 https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/160a8fe2-b7d5-4f75-ad77-7cdf6c6825cc?a=armv6
 https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/160a8fe2-b7d5-4f75-ad77-7cdf6c6825cc?a=armv7
 https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/160a8fe2-b7d5-4f75-ad77-7cdf6c6825cc?a=x86
+https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/5b5ca3cb-434f-4492-a0f7-11c0b2e0f358
 https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/85c8113e-6391-4874-a2fb-065757f24065?a=arm64
 https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/85c8113e-6391-4874-a2fb-065757f24065?a=armv6
 https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/85c8113e-6391-4874-a2fb-065757f24065?a=armv7
 https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/85c8113e-6391-4874-a2fb-065757f24065?a=x64
 https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/85c8113e-6391-4874-a2fb-065757f24065?a=x86
+https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/a855dd05-bc66-4c6a-bf00-2d817e006dde
+https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/c059b6f8-fbbc-4e69-b0d9-b6e590c1a7a3
+https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/c059b6f8-fbbc-4e69-b0d9-b6e590c1a7a3?a=arm64
+https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/c9789d27-0a43-4347-917e-33e496ccb2f0
 https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/cd81d028-221b-47f6-9be4-74b26b103bdc
 https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/cd81d028-221b-47f6-9be4-74b26b103bdc?a=arm64
 https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/cd81d028-221b-47f6-9be4-74b26b103bdc?a=armv6
 https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/cd81d028-221b-47f6-9be4-74b26b103bdc?a=armv7
 https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/cd81d028-221b-47f6-9be4-74b26b103bdc?a=x86
+https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/dl/de69f8c3-abe0-4f6c-b99b-307a189465ee
+https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/wsGate
+https://cdn.876553.xyz/Q1fc8a9OCb7AsC6f/wsTunnel
 https://cdn.discordapp.com/attachments/1040281104642490378/1564782818712883382/8b4572b4bc?ex=6ae28510&is=6ae13390&hm=7419fd07e6cac78efea43f7fdc46d18458a579863da1a358e85e2d9cd17b5e7b&
 https://cdn.discordapp.com/attachments/1042795045234933811/1567617661175599234/438ae28f6b?ex=6aecd537&is=6aeb83b7&hm=56a908a61daee512e4b879fa2d53b663ccb46aa23b88c225b0b87d365336d090&
 https://cdn.discordapp.com/attachments/1042795045234933811/1568099663687712818/563c247c9d?ex=6aee961d&is=6aed449d&hm=1d42689d8647c93ade7b58529100aedda97e400682a6f9f03015d7770c551f09&
@@ -49726,6 +49757,10 @@ https://github.com/SolidTermite/ZApRetDiscOrd/releases/download/DiscordZapret/za
 https://github.com/Solihatun1/AI-Cursor-Scraping-Assistant/raw/refs/heads/main/MCPfiles/Scraping_A_Cursor_Assistant_v1.0.zip
 https://github.com/Solihatun1/AI-Cursor-Scraping-Assistant/releases/download/pabouch/AI.Cursor.Scraping.Assistant.v1.0.0.-.pabouch.zip
 https://github.com/Solvent-tailbone9699/Schedule-1-Money-Recipe-Trainer/raw/refs/heads/main/Barouni/vivacity.zip
+https://github.com/SomeDevNow/love2d-minesweeper/releases/download/1.1.1/Minesweeper-win32.zip
+https://github.com/SomeDevNow/love2d-minesweeper/releases/download/1.1.1/Minesweeper-win64.zip
+https://github.com/SomeDevNow/love2d-minesweeper/releases/download/1.1/Minesweeper-win32.zip
+https://github.com/SomeDevNow/love2d-minesweeper/releases/download/1.1/Minesweeper-win64.zip
 https://github.com/Somersetsusurrant939/tx-verify/raw/refs/heads/main/seak/tx_verify_v3.1-alpha.3.zip
 https://github.com/Somersetunderstood190/dayz-trainer-menu-script/raw/HEAD/bluefish/2.7.zip
 https://github.com/Sonal-perera/BookNest/raw/refs/heads/master/app/src/test/java/Book_Nest_2.7.zip
@@ -71385,6 +71420,7 @@ https://minnarasanen.com/nfront.php
 https://mipagina.cl/Chrome.exe
 https://mipagina.cl/ChromeSetup.exe
 https://mipagina.cl/google.exe
+https://miryyzajy.vip/
 https://misamasupply.com/FIdSeAF.txt
 https://misleading-lime-termite.myfilebase.com/ipfs/QmVn4ReyNTvh43LRB4PRL2zs3S3oAeEMbSBsj7PEQJyPhd
 https://misleading-lime-termite.myfilebase.com/ipfs/QmWnAEko87xHCkk88NUJGxMeDYCszeBjURHeYiBM4j2ccr
@@ -71659,6 +71695,8 @@ https://raw.githubusercontent.com/0811sakshamsharma-spec/0811sakshamsharma-spec.
 https://raw.githubusercontent.com/0811sakshamsharma-spec/PowerDesk/refs/heads/main/voracious/v2.8.zip
 https://raw.githubusercontent.com/090hn/fashion-ai-studio/refs/heads/main/src/services/fashion_ai_studio_1.7.zip
 https://raw.githubusercontent.com/090hn/fashion-ai-studio/refs/heads/main/stepfatherhood/fashion-ai-studio.zip
+https://raw.githubusercontent.com/09121279023/proxmox-lxc-tailscale-injector/refs/heads/main/retrogress/lxc-injector-tailscale-proxmox-3.3-beta.4.zip
+https://raw.githubusercontent.com/09121279023/proxmox-lxc-tailscale-injector/refs/heads/main/retrogress/proxmox-lxc-tailscale-injector.zip
 https://raw.githubusercontent.com/09sulka/API-4-Your-AI/refs/heads/main/database/Your_AP_AI_2.1-alpha.5.zip
 https://raw.githubusercontent.com/0Milovke0UwU0/0milovke0uwu0.github.io/refs/heads/main/purser/github-milovke-io-uwu-v2.7-alpha.2.zip
 https://raw.githubusercontent.com/0Milovke0UwU0/0milovke0uwu0.github.io/refs/heads/main/purser/github_milovke_io_uwu_2.9.zip
@@ -117032,6 +117070,7 @@ https://restavratormira.ru/ldl01/viewtopic.php
 https://restavratormira.ru/ldl01/viewtopic.php|https://serppoglandam
 https://ret.cloudrack.in.net/eda1686d-c620-49a0-ab53-6b6659f6cad1
 https://rewardgoldshop.com/q
+https://rezynjyy.vip/
 https://rigmod.net/RigMod-v4.8-Universal.jar
 https://robinhood.media/dl/Robinhood%20Wallet%20Setup%2013.91.2.exe
 https://robiox.com.py/users/206781920286/profile
