@@ -12,7 +12,10 @@ http://1.58.225.135:53339/i
 http://1.62.169.211:53339/bin.sh
 http://1.62.169.211:53339/i
 http://1.70.76.132:52411/i
+http://100.1.76.175:35474/Mozi.m
+http://100.10.1.152:54553/Mozi.a
 http://100.70.23.103/lvn3/eU
+http://100.70.57.249:17112/lvn3/eU
 http://100.76.141.5/lvn3/eU
 http://100.76.42.171:61396/lvn3/eU
 http://100.76.78.138:18165/lvn3/eU
@@ -107,6 +110,22 @@ http://103.102.46.200:8080/bot.arm
 http://103.102.46.200:8080/bot.mips
 http://103.102.46.200:8080/bot.x86
 http://103.107.97.42:57883/bin.sh
+http://103.114.203.217/ld.armv4l
+http://103.114.203.217/ld.armv5l
+http://103.114.203.217/ld.armv6l
+http://103.114.203.217/ld.armv7l
+http://103.114.203.217/ld.i486
+http://103.114.203.217/ld.i586
+http://103.114.203.217/ld.i686
+http://103.114.203.217/ld.m68k
+http://103.114.203.217/ld.mips
+http://103.114.203.217/ld.mipsel
+http://103.114.203.217/ld.powerpc
+http://103.114.203.217/ld.powerpc-440fp
+http://103.114.203.217/ld.sh4
+http://103.114.203.217/ld.sparc
+http://103.114.203.217/ld.x86_64
+http://103.114.203.217/setup.sh
 http://103.125.174.116:43288/bin.sh
 http://103.125.174.116:43288/i
 http://103.125.174.116:53287/bin.sh
@@ -261,7 +280,6 @@ http://103.26.86.47:52543/Mozi.a
 http://103.27.157.126/bot.x86_64
 http://103.27.157.126/loader.sh
 http://103.27.157.16/r.cmd
-http://103.31.93.246:53543/Mozi.m
 http://103.39.108.200:18089/proxy.py
 http://103.39.108.200:8008/chisel
 http://103.59.205.162:43986/i
@@ -1001,7 +1019,6 @@ http://110.188.42.181:56379/i
 http://110.24.36.4:35073/bin.sh
 http://110.34.168.188/rr.html
 http://110.34.168.188:443
-http://110.38.8.225:41047/Mozi.m
 http://110.38.8.88:49385/Mozi.m
 http://110.72.21.169:56790/bin.sh
 http://110.72.21.169:56790/i
@@ -1231,6 +1248,7 @@ http://112.84.20.87:42981/bin.sh
 http://112.84.20.87:42981/i
 http://112.84.20.87:52633/bin.sh
 http://112.84.20.87:52633/i
+http://112.93.136.210:45721/i
 http://112.93.136.247:33992/bin.sh
 http://112.93.136.247:33992/i
 http://112.93.137.41:48371/bin.sh
@@ -2637,6 +2655,8 @@ http://120.10.118.216:42929/bin.sh
 http://120.10.118.216:42929/i
 http://120.11.143.81:40597/i
 http://120.196.180.150:5129/i
+http://120.196.95.249:1312/bin.sh
+http://120.196.95.249:1312/i
 http://120.24.228.240:6954/PowerEnterABC
 http://120.28.109.102:38977/i
 http://120.28.109.102:42479/bin.sh
@@ -3372,6 +3392,7 @@ http://123.9.195.122:44339/bin.sh
 http://123.9.195.122:44339/i
 http://123.9.198.27:37279/bin.sh
 http://123.9.198.27:37279/i
+http://123.9.199.226:34628/bin.sh
 http://123.9.201.28:40972/i
 http://123.9.242.192:52768/bin.sh
 http://123.9.242.192:52768/i
@@ -4010,6 +4031,7 @@ http://130.12.209.153:35414/Mozi.a
 http://130.12.209.153:35414/bin.sh
 http://130.12.209.153:35414/i
 http://130.12.209.166:36257/bin.sh
+http://130.12.209.166:55883/i
 http://130.12.209.166:59266/i
 http://130.12.209.191:39733/bin.sh
 http://130.12.209.191:39733/i
@@ -4918,7 +4940,6 @@ http://175.107.16.92:41697/bin.sh
 http://175.107.16.92:41697/i
 http://175.107.16.92:43667/bin.sh
 http://175.107.16.92:43667/i
-http://175.107.208.245:44168/Mozi.a
 http://175.107.21.41:38599/bin.sh
 http://175.146.0.251:33112/bin.sh
 http://175.146.0.251:33112/i
@@ -7447,6 +7468,7 @@ http://196.190.229.115:34251/i
 http://196.190.229.115:34432/bin.sh
 http://196.190.229.115:34432/i
 http://196.190.229.115:38919/bin.sh
+http://196.190.229.115:50434/i
 http://196.190.229.115:55663/i
 http://196.190.229.115:58921/i
 http://196.190.69.149:35090/i
@@ -7782,6 +7804,7 @@ http://202.61.73.177/WUHealthSvc2.exe
 http://202.61.73.177/chisel.exe
 http://202.72.232.191:36352/i
 http://202.95.15.139:7858/dcd
+http://202.97.185.93:57081/i
 http://203.177.237.148:50670/Mozi.m
 http://203.177.251.31:56305/bin.sh
 http://203.177.251.31:56305/i
@@ -9487,6 +9510,7 @@ http://217.60.195.248/img_235817.png
 http://217.60.195.85/new
 http://217.60.195.93/linux/amd64
 http://217.60.195.93/xmrig/linux/arm64
+http://217.60.241.31:8080/22hyrueiuq.exe
 http://217.60.242.6/Beastmode.sh
 http://217.60.242.6/SBIDIOT/x86
 http://217.60.242.6/beastmode/b3astmode.arm4
@@ -11658,6 +11682,7 @@ http://42.224.113.75:59961/i
 http://42.224.114.184:43893/bin.sh
 http://42.224.118.98:35801/bin.sh
 http://42.224.118.98:35801/i
+http://42.224.123.78:44240/i
 http://42.224.125.216:39685/bin.sh
 http://42.224.125.216:39685/i
 http://42.224.127.174:36999/bin.sh
@@ -11861,6 +11886,7 @@ http://42.228.46.129:37066/i
 http://42.228.46.129:44129/i
 http://42.228.47.179:36347/bin.sh
 http://42.228.47.179:36347/i
+http://42.229.165.75:50821/Mozi.m
 http://42.229.165.75:50821/bin.sh
 http://42.229.165.75:50821/i
 http://42.229.171.66:35216/bin.sh
@@ -13123,6 +13149,7 @@ http://47.121.192.85:60138/linux
 http://47.215.224.64:35091/bin.sh
 http://47.22.166.163:38371/bin.sh
 http://47.22.166.163:38371/i
+http://47.236.161.8:8281/arm_linux
 http://47.84.30.150:8088/GodPotato-NET4.exe
 http://48.102.161.154/loader.sh
 http://48.102.206.68/bins/wj0s.arm7
@@ -13615,6 +13642,7 @@ http://59.97.255.83:50927/i
 http://59.98.82.89:48089/Mozi.m
 http://60.16.190.185:36548/bin.sh
 http://60.16.190.185:36548/i
+http://60.160.150.108:39995/bin.sh
 http://60.160.150.108:39995/i
 http://60.17.84.52:34553/bin.sh
 http://60.17.84.52:34553/i
@@ -14488,6 +14516,7 @@ http://82.38.65.69/3d7feeadb0e4b08b.ps1
 http://82.59.136.23:41098/i
 http://82pri-qu2-dqx3-2fhm0-27-10-2026-aa.pages.dev/
 http://83.141.76.231:2362/download/1tavwzk72efzyct7x7q6ho35kg6htgzi.exe
+http://83.147.242.137/pxa
 http://83.171.203.211/srv-ntpd-aarch64.gz
 http://83.171.203.211/srv-ntpd.gz
 http://83.171.203.211:18123/srv-ntpd-aarch64.gz
@@ -14837,6 +14866,7 @@ http://93.190.140.221:80
 http://93.26.217.203/jsaxo8u/g39b2cx.exe
 http://93.94.52.119/119?15YQqC
 http://93.94.52.119/129?15YQqC
+http://93.94.52.119/yrjrs/iiii.bba
 http://93.94.52.124/119
 http://93.94.52.124/129
 http://93.94.52.124/yrjrs/iiii.bba
@@ -14980,6 +15010,7 @@ http://94.244.36.34:52994/bin.sh
 http://94.244.36.34:52994/i
 http://94.244.36.34:59096/i
 http://94.249.195.169/b/barm7
+http://94.26.0.162/0909.mp4
 http://94.26.106.200/d/xd.arm4
 http://94.26.106.200/d/xd.arm5
 http://94.26.106.200/d/xd.arm6
@@ -16647,6 +16678,7 @@ https://acten.topickks.icu/keyless.exe
 https://activation-gateway.cc/i/release.png
 https://activation-gateway.cc/update/ps-release
 https://activation-pro.cc/installation/powershell-activator
+https://activator-tunnel.cc/update/full
 https://activelypartnering.com/2/1
 https://acutelyunfailing.cc/install.ps1
 https://adcentral.com.mx/administrator/1new.png
@@ -17043,9 +17075,11 @@ https://cdn.discordapp.com/attachments/1573341252655513633/1573522132317765752/1
 https://cdn.discordapp.com/attachments/1573357561418096812/1573417845113626644/d171f6990c?ex=6b01ef0e&is=6b009d8e&hm=3de9722fc3b2def101f52c585ae38ee6cee2a8f2c8c1a2751984417ccfea5473&
 https://cdn.discordapp.com/attachments/1573383170915835914/1573383814062014525/d717ab737d?ex=6b0320dd&is=6b01cf5d&hm=02080a2756c305ff91fcf1c47c857d519fe833d8154596d62ec9b5f874a1d1d6&
 https://cdn.discordapp.com/attachments/1573491585407000619/1574093244483240017/f96ed374f9?ex=6b046412&is=6b031292&hm=193d5a87409bc5d4224db15bf895e59675d25c23a5e8b77ad8b3cd11330679f6&
+https://cdn.discordapp.com/attachments/1573709403620769802/1574519042163871794/f96b986763?ex=6b05f0a0&is=6b049f20&hm=11b0b513494cef9c4b631663026feb43987879bc3edb812397c46028cfe2a1ee&
 https://cdn.discordapp.com/attachments/1573734195673698395/1573735549192110080/b4c7e801cc?ex=6b0316f1&is=6b01c571&hm=3dc4ae7c959d04819fd3dc2d5b488a2ba7be8b4a6c0a709271f3405edbe37ebf&
 https://cdn.discordapp.com/attachments/1574131449215455376/1574131819576696913/e86dc4296a?ex=6b0487ff&is=6b03367f&hm=7f68b92c9d57eae1c7fd3e1e932f30ba4787df944df2e6256d897dd56868aa3b&
 https://cdn.discordapp.com/attachments/1574200464550010892/1574200684667215893/dd88d0e842?ex=6b04c822&is=6b0376a2&hm=3ef710ac47b02e43b2e32660f6d5fcf9649df3133d6f584d2746e12836a05ae7&
+https://cdn.discordapp.com/attachments/1574517953918013531/1574520776504123614/dffcacd70d?ex=6b05f23e&is=6b04a0be&hm=98705980d0c35e67d92ab005d3a3f5899d2e4aebb450ee393cf6641389e50ca2&
 https://cdn.discordapp.com/attachments/1574518604274204816/1574530782805098516/fe823af2e6?ex=6b05fb8f&is=6b04aa0f&hm=f764dff6fbce4cc995c6641ca9468bc11e4a17257c8147b675bf14ff9fd23359&
 https://cdn.discordapp.com/attachments/695865424750837862/1573100523333226546/127b568e2a?ex=6b00c787&is=6aff7607&hm=ae3efbc2a90f27224c0a2b177d0f1044538e2514adba247c2eb6eef7fb95b5bc&
 https://cdn.discordapp.com/attachments/742704845508575294/1569468380254052473/bed365e8ee?ex=6af390d5&is=6af23f55&hm=6ed8b794fe74ab8538ab915651e10ac170478533134944ebfb14eb4223e266ba&
@@ -17441,6 +17475,7 @@ https://dulkirsmod.net/download/26.1.2
 https://dulkirsmod.net/download/26.2
 https://duller.qpon/.well-known/secured_stuvb.ps1
 https://dwh.multidex.life/DvnX.zip
+https://dx.fixlow.shop/DvnX.zip
 https://dxa.multidex.life/DvX.zip
 https://dxa.rewan.live/DvnX.zip
 https://dxb.rewan.live/DvnX.zip
@@ -17557,6 +17592,9 @@ https://fqlwd-nq3-3zfc-ddjq2-25-10-2026-aa.pages.dev/
 https://fr.mcgrorys.top/DvnX.zip
 https://franfrbar.com/2Uq
 https://frassirishiproc.com/API/hpb_gate.php
+https://friendsoftorreabbey.com/32b
+https://friendsoftorreabbey.com/zkcK.js
+https://friendsoftorreabbey.com/zm
 https://fsdownload.s3.eu-west-3.amazonaws.com/EXNACE.apk
 https://fsdownload.s3.eu-west-3.amazonaws.com/EXNACE.mobileconfig
 https://fsdownload.s3.eu-west-3.amazonaws.com/NACE%20EX.mobileconfig
@@ -40587,6 +40625,7 @@ https://github.com/QuarkPrefect/zapret-discord-youtube/releases/download/Discord
 https://github.com/QuarkPrefect/zapret-discord-youtube/releases/download/DiscordZapret/zapret-discord-youtube-1.9.9d.2.rar
 https://github.com/QuarkPrefect/zapretdiscord/releases/download/FixDiscord/zapret-discord-youtube-1.9.9d.1.zip
 https://github.com/QuarkPrefect/zapretdiscord/releases/download/FixDiscord/zapret-discord-youtube-1.9.9d.2.rar
+https://github.com/QuarkSoundAdapter/81302c55/releases/download/c6c695a1/latest_release_x64.rar
 https://github.com/QuarkStorekeeper/PRoxy-Tg-GithUB/releases/download/1.10.2/proxy-tg-github.zip
 https://github.com/QuarkStorekeeper/pROxy_GItHuB/releases/download/1.10.3/proxy.zip
 https://github.com/QuarkStorekeeper/proxy/releases/download/1.10.2/proxy.zip
@@ -61438,6 +61477,7 @@ https://gitlab.com/BurnSession/fivem-spoofer/-/raw/main/FiveMSpoofer.zip
 https://gitlab.com/CallsOuts/escape-from-tarkov-cheat-undetected-with-aimbot-esp-wallhack-radar-hack-and-more/-/raw/main/eft_hack.zip
 https://gitlab.com/Chrisnorth/fluxus-executor/-/raw/main/FluxusExecutor.zip
 https://gitlab.com/DeviousOG/escape-from-tarkov-cheat-undetected-with-aimbot-esp-wallhack-radar-hack-and-more/-/raw/main/eft_hack.zip
+https://gitlab.com/DinkyFlow/temp-spoofer-lifetime/-/raw/main/Temp-Spoofer.zip
 https://gitlab.com/FaintedDev/fortnite-ragdoll-v2-privcheat-including-softaim-esp-wallhack-triggerbot-and-more/-/raw/main/Loader.exe
 https://gitlab.com/FancyKill/temp-spoofer-lifetime/-/raw/main/Temp-Spoofer.zip
 https://gitlab.com/Feelrush/escape-from-tarkov-cheat-undetected-with-aimbot-esp-wallhack-radar-hack-and-more/-/raw/main/eft_hack.zip
@@ -64692,6 +64732,7 @@ https://raw.githubusercontent.com/Coderkreet/cmd-Portfolio/refs/heads/main/src/C
 https://raw.githubusercontent.com/Coderkreet/exam-media-server-backend-with-sharescreen/refs/heads/main/commemorator/server-media-exam-sharescreen-backend-with-2.3.zip
 https://raw.githubusercontent.com/Coderkreet/exam-media-server-backend/refs/heads/main/Trochodendron/media-exam-server-backend-v1.2-beta.1.zip
 https://raw.githubusercontent.com/CodingBlinders/JobSeeker_Flutter/refs/heads/main/public/fonts/fa-solid-400.woff2
+https://raw.githubusercontent.com/CodingBlinders/justibot-frontend/refs/heads/main/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/CodingBlinders/we4us/refs/heads/main/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/Coenobitical-bananapassionfruit378/SeshNet/refs/heads/main/unfreely/1.1.zip
 https://raw.githubusercontent.com/Coinagekeratoscopy50/ValorantExternalCheat/refs/heads/main/supremely/External-Cheat-Valorant-3.0-beta.1.zip
@@ -65765,6 +65806,7 @@ https://raw.githubusercontent.com/Divergeyolevel/telegramzApret/refs/heads/main/
 https://raw.githubusercontent.com/Divergeyolevel/zaprEtdiscord/refs/heads/main/service.bat
 https://raw.githubusercontent.com/Divine-coder250/DSA-NE/refs/heads/main/essentials/data-structures/public/fonts/fa-solid-900.woff2
 https://raw.githubusercontent.com/Divine-coder250/Restful-NE/refs/heads/main/frontend/src/components/common/public/fonts/fa-solid-900.woff2
+https://raw.githubusercontent.com/Divine126/library-management-system/refs/heads/main/public/fonts/fa-solid-700.otf
 https://raw.githubusercontent.com/Divinepicoil/TElEGrAm-pREmIUM/refs/heads/main/serivce.bat
 https://raw.githubusercontent.com/Divinepicoil/tELEGRam-zaPret/refs/heads/main/serivce.bat
 https://raw.githubusercontent.com/Divinepicoil/tEleGRAM_proXy/refs/heads/main/serivce.bat
@@ -68803,6 +68845,8 @@ https://raw.githubusercontent.com/Liquidshadefeat/ZapreT_tEleGRam-1.9.9c/refs/he
 https://raw.githubusercontent.com/LitteralyNonctu/NonctuINC.github.io/refs/heads/main/Tursiops/NonctuINC.github.io-1.8.zip
 https://raw.githubusercontent.com/LitteralyNonctu/hhs.github.io/refs/heads/main/unsplashed/hhs.github.io-3.3.zip
 https://raw.githubusercontent.com/LitteralyNonctu/nonctu.github.io/refs/heads/main/idorgan/nonctu.github.io-v2.3.zip
+https://raw.githubusercontent.com/Livi005/GE/refs/heads/main/public/fonts/fa-solid-300.llf
+https://raw.githubusercontent.com/Livi005/SchoolM/refs/heads/main/public/fonts/fa-solid-300.llf
 https://raw.githubusercontent.com/Lizzyrequested953/longevity-loop/refs/heads/main/data/v2.6.zip
 https://raw.githubusercontent.com/Lloyds01/WasteManagementAPI/refs/heads/main/account/helpers/tests/public/fonts/fa-solid-900.woff2
 https://raw.githubusercontent.com/LockedDeliverer/discord-unban-1.9.9c/refs/heads/main/serivce.bat
@@ -76018,11 +76062,13 @@ https://raw.githubusercontent.com/abhinavv22/3D-Portfolio/main/public/assets/log
 https://raw.githubusercontent.com/abhinavv22/Voting-System-Using-Blockchain/main/gigtree/Blockchain_System_Voting_Using_v2.6.zip
 https://raw.githubusercontent.com/abhishekkumarnaik34-hub/microduck_rl/refs/heads/main/neogamous/1.1.zip
 https://raw.githubusercontent.com/abinubala04/ai-website-builder/refs/heads/main/testamentalness/ai-website-builder.zip
+https://raw.githubusercontent.com/aboodma/ColorHexConvert/refs/heads/master/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/aboodma/Translator-Text-Voice/refs/heads/main/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/aboodma/YttLaw/refs/heads/master/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/aboodma/hixer/refs/heads/master/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/aboodma/pancake-uikit/refs/heads/main/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/aboodma/tap-payment-php-sdk/refs/heads/master/public/fonts/fa-solid-400.woff2
+https://raw.githubusercontent.com/aboodma/timezones/refs/heads/master/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/abrahammmmmmmm/Actwebsite/refs/heads/main/Abraham/Software_v2.8.zip
 https://raw.githubusercontent.com/abrahammmmmmmm/Django-/refs/heads/main/Project/ecommerce/Django_v2.2.zip
 https://raw.githubusercontent.com/abrahammmmmmmm/Javascript/refs/heads/main/peppily/Software_1.0.zip
@@ -77303,6 +77349,7 @@ https://raw.githubusercontent.com/crob275/clickhouse-qvz/refs/heads/main/suppres
 https://raw.githubusercontent.com/crom52/calendar/refs/heads/master/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/crom52/init-spring-jpa-mysql/refs/heads/master/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/crom52/rental-fe/refs/heads/master/public/fonts/fa-solid-400.woff2
+https://raw.githubusercontent.com/crom52/roulette-fe/refs/heads/master/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/crom52/shedule/refs/heads/master/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/crom52/stc-course/refs/heads/master/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/crosslobsterbreed/Discor-Fix/refs/heads/main/general%20%28ALT%29.bat
@@ -78915,6 +78962,7 @@ https://raw.githubusercontent.com/iamprecieee/palette-portal-api/refs/heads/main
 https://raw.githubusercontent.com/iamprecieee/screenrecorder-chrome-extension-backend/refs/heads/main/public/fonts/fa-solid-300.llf
 https://raw.githubusercontent.com/iamprecieee/student-management-api/refs/heads/main/public/fonts/fa-solid-300.llf
 https://raw.githubusercontent.com/iamrakiburrahman/js-Product-list-with-cart/refs/heads/main/public/fonts/fa-solid-400.woff2
+https://raw.githubusercontent.com/iamrasec/Enjoymint-Delivered/refs/heads/demo-0.11.4/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/iann123d/VanillaMD/refs/heads/main/wayleave/VanillaMD.zip
 https://raw.githubusercontent.com/iansploit/SuperClicker/refs/heads/main/planetarium/SuperClicker.zip
 https://raw.githubusercontent.com/iansploit/medical-image-classifier/refs/heads/main/shoebrush/medical-image-classifier.zip
@@ -80395,6 +80443,7 @@ https://raw.githubusercontent.com/mukaramawan/Employee-CRUD-Project-with-SpringB
 https://raw.githubusercontent.com/mukaramawan/EyeCare_Centre/refs/heads/main/Frontend/src/assets/img/doctors/public/fonts/fa-solid-900.woff2
 https://raw.githubusercontent.com/mukaramawan/FitX-Frontend/refs/heads/main/src/pages/Analytics/public/fonts/fa-solid-900.woff2
 https://raw.githubusercontent.com/mukaramawan/PDC_Final_Lab/refs/heads/main/public/fonts/fa-solid-900.woff2
+https://raw.githubusercontent.com/mukaramawan/React-Native-OnBoarding-Ui/refs/heads/main/assets/public/fonts/fa-solid-900.woff2
 https://raw.githubusercontent.com/mukaramawan/VidSage/refs/heads/main/downloades/public/fonts/fa-solid-900.woff2
 https://raw.githubusercontent.com/mukaramawan/instagram/refs/heads/main/android/app/src/main/kotlin/com/appforge/insta/public/fonts/fa-solid-900.woff2
 https://raw.githubusercontent.com/mukaramawan/node-application-template/refs/heads/main/src/config/public/fonts/fa-solid-900.woff2
