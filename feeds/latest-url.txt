@@ -211,6 +211,7 @@ http://103.19.49.134:32942/i
 http://103.19.49.134:32946/bin.sh
 http://103.19.49.134:32946/i
 http://103.19.49.134:56164/i
+http://103.19.49.134:58489/bin.sh
 http://103.190.23.91:36811/bin.sh
 http://103.190.23.91:36811/i
 http://103.190.23.91:43825/i
@@ -247,6 +248,7 @@ http://103.203.210.102:56578/i
 http://103.203.210.102:57006/i
 http://103.203.210.102:60668/bin.sh
 http://103.203.45.3:52583/Mozi.7
+http://103.203.45.4:44151/Mozi.m
 http://103.206.103.228:34202/i
 http://103.210.144.11/backups/.../arm
 http://103.210.144.11/backups/.../arm5
@@ -260,7 +262,6 @@ http://103.210.144.11/backups/.../sh4
 http://103.210.144.11/backups/.../spc
 http://103.210.144.11/backups/.../x86
 http://103.213.112.170:47236/Mozi.m
-http://103.213.112.90:46740/Mozi.m
 http://103.216.153.140:10086/
 http://103.238.235.250/hiddenbin/ntb.mips
 http://103.238.235.250/hiddenbin/ntb.mipsel
@@ -319,7 +320,6 @@ http://103.68.95.197:33529/bin.sh
 http://103.68.95.197:33529/i
 http://103.70.87.32:44801/bin.sh
 http://103.70.87.32:44801/i
-http://103.79.78.162/upsupx3.txt
 http://103.87.194.104:39673/bin.sh
 http://103.87.194.104:39673/i
 http://103.87.194.104:41672/i
@@ -946,6 +946,7 @@ http://108.165.95.10/xmrig_aarch64
 http://108.165.95.10/xmrig_armv7l
 http://108.165.95.10/xmrig_x86
 http://108.165.95.10/xmrig_x86_64
+http://108.165.95.35/x86_64
 http://108.168.45.166:33295/bin.sh
 http://108.168.45.166:33295/i
 http://108.168.45.166:48247/i
@@ -1555,6 +1556,7 @@ http://115.224.94.140:60828/i
 http://115.224.95.171:44868/i
 http://115.226.178.86:38999/bin.sh
 http://115.226.188.15:59080/bin.sh
+http://115.226.188.15:59080/i
 http://115.226.191.119:41583/i
 http://115.227.112.220:60542/i
 http://115.230.115.24:54347/i
@@ -1869,6 +1871,8 @@ http://115.53.26.118:53828/bin.sh
 http://115.53.26.118:53828/i
 http://115.53.31.18:41021/bin.sh
 http://115.53.31.18:41021/i
+http://115.54.111.21:39217/bin.sh
+http://115.54.111.21:39217/i
 http://115.54.113.9:43305/bin.sh
 http://115.54.113.9:43305/i
 http://115.54.116.7:37753/bin.sh
@@ -3513,6 +3517,7 @@ http://125.40.112.202:60611/bin.sh
 http://125.40.112.202:60611/i
 http://125.40.123.121:58006/bin.sh
 http://125.40.123.121:58006/i
+http://125.40.151.98:58318/bin.sh
 http://125.40.151.98:58318/i
 http://125.40.154.203:57868/bin.sh
 http://125.40.154.203:57868/i
@@ -4289,8 +4294,6 @@ http://152.42.203.125/main_mips
 http://152.42.203.125/main_mpsl
 http://153.117.13.135:50651/Mozi.m
 http://153.117.15.26:34865/Mozi.m
-http://153.117.28.198:42191/Mozi.m
-http://153.117.33.228:43747/Mozi.m
 http://153.117.34.237:48676/Mozi.m
 http://153.117.40.65:52555/Mozi.a
 http://153.117.41.67:60618/Mozi.m
@@ -5403,7 +5406,6 @@ http://179.49.213.85:60713/bin.sh
 http://179.49.213.85:60713/i
 http://18.195.101.10:8080/payload/f47b9958e130/deskhlp.exe
 http://18.195.101.10:8080/payload/latest/bot.exe
-http://18.195.101.10:8080/ws/agent?token=d439c841ba226a16defa9f23ef4bb84a1330f5801d333482
 http://18.220.36.224/cnc-linux-arm64
 http://18.220.36.224/loader.aarch64
 http://18.220.36.224/loader.x86_64
@@ -6149,6 +6151,7 @@ http://182.123.211.154:52658/bin.sh
 http://182.123.211.154:52658/i
 http://182.123.211.40:41376/bin.sh
 http://182.123.211.40:41376/i
+http://182.123.253.9:33050/i
 http://182.123.40.223:39805/i
 http://182.123.45.159:57771/bin.sh
 http://182.124.114.26:44103/bin.sh
@@ -6927,6 +6930,8 @@ http://195.64.162.224:50483/i
 http://195.64.243.84:39888/i
 http://195.64.243.84:56081/i
 http://196.188.135.20:33390/i
+http://196.188.135.20:58367/bin.sh
+http://196.188.135.20:58367/i
 http://196.188.141.17:41594/bin.sh
 http://196.188.141.17:51134/i
 http://196.188.141.17:52413/bin.sh
@@ -8057,7 +8062,6 @@ http://204.141.236.157:8092/armv6l
 http://204.141.236.157:8092/armv7
 http://204.141.236.157:8092/armv7l
 http://204.141.236.157:8092/armv8l
-http://204.141.236.157:8092/csky/v_01000000.bin
 http://204.141.236.157:8092/csky/vx_A.bin
 http://204.141.236.157:8092/i386
 http://204.141.236.157:8092/i486
@@ -9837,6 +9841,7 @@ http://222.141.22.66:35451/bin.sh
 http://222.141.22.66:35451/i
 http://222.141.245.71:40247/i
 http://222.141.26.85:37164/i
+http://222.141.36.43:49062/bin.sh
 http://222.141.36.43:49062/i
 http://222.141.40.130:49909/bin.sh
 http://222.141.40.130:49909/i
@@ -9930,10 +9935,10 @@ http://223.11.58.82:38987/i
 http://223.112.189.134:59866/bin.sh
 http://223.112.189.134:59866/i
 http://223.123.34.187:46347/Mozi.m
-http://223.123.34.228:37008/Mozi.a
 http://223.123.34.247:58254/Mozi.a
+http://223.123.34.255:33326/Mozi.m
+http://223.123.34.25:45287/Mozi.7
 http://223.123.47.230:38536/Mozi.m
-http://223.123.72.24:43794/Mozi.a
 http://223.14.78.75:58995/i
 http://223.151.73.230:41862/i
 http://223.151.76.117:48769/bin.sh
@@ -11470,6 +11475,8 @@ http://42.232.48.210:54562/bin.sh
 http://42.232.48.210:54562/i
 http://42.232.51.180:52324/bin.sh
 http://42.232.51.180:52324/i
+http://42.232.75.226:52442/bin.sh
+http://42.232.75.226:52442/i
 http://42.233.104.32:38592/bin.sh
 http://42.233.104.32:38592/i
 http://42.233.104.42:38892/bin.sh
@@ -12152,7 +12159,6 @@ http://45.198.224.75/ppc64
 http://45.198.224.75/run.sh
 http://45.198.224.75/x86
 http://45.198.224.75/x86_64
-http://45.198.224.75/xmrig-x64
 http://45.198.224.89/arm7
 http://45.198.224.89/curl.sh
 http://45.198.224.89/gamebin/d3d10
@@ -15158,7 +15164,6 @@ http://www.intermune.se/files/up_docx.php
 http://www.ishopsg.com/sites.php
 http://www.jorgenholzmann.nl/sandex/post.php
 http://www.jpgo.biz/index1.php
-http://www.jts6831897.casa/jarc/
 http://www.jubex.eu/images/gtebmjl/optufsq/secured_stuba.ps1
 http://www.jungle-island.com/images/banners/lsb.swf
 http://www.kaerunote.com/_module/book/index
@@ -15616,7 +15621,6 @@ https://2.57.122.176.nip.io/xmrig-x64
 https://216.75.142.67:8443/xmrig
 https://221.37.167.72.host.secureserver.net/0385072566765651364.zip
 https://22cordycepscloud.com/
-https://22elmoravix.website/
 https://22enokikernel.com/
 https://22rt6-tln-4fx5-569d7-08-11-2026-aa.pages.dev/
 https://22tazemoravi.website/
@@ -26664,6 +26668,7 @@ https://github.com/zubairmk83/ViTP/raw/refs/heads/main/mmcv/tests/test_device/te
 https://github.com/zurats/agent-skills-discovery-rfc/raw/refs/heads/main/examples/skills_rfc_discovery_agent_2.2.zip
 https://github.com/zuzia3664/dwarf-fortress-translator/raw/main/observership/translator_dwarf_fortress_radiale.zip
 https://gitlab.com/Ariesstone/fivem-mod-menu/-/raw/main/Loader.exe
+https://gitlab.com/BangHook/fortnitespoofer/-/raw/main/FortniteSpoofer.zip
 https://gitlab.com/Bledderhawk/fivem-mod-menu/-/raw/main/Loader.exe
 https://gitlab.com/BrightShow/fivem-mod-menu/-/raw/main/Loader.exe
 https://gitlab.com/BurnSession/fivem-spoofer/-/raw/main/FiveMSpoofer.zip
@@ -27284,6 +27289,8 @@ https://polyaris-beta.com/PolyarisBeta2.4.1.zip
 https://ponyvps.online/WWVPN.apk
 https://portal.sbn.co.th/rss.php
 https://poshmark.id94653855.com/220209146
+https://post-49.com/curl/fhr3223pmam/9c5bsqq1f4o0jfry.json
+https://post-49.com/f/9ksbxnvwoj7pts0uxop4sa/01pemlfd
 https://postu.cloud/download/t/8DGT2Gx4FUDVso5JnrMugXgVjZ6343YJ
 https://postu.cloud/download/t/PCXmxVFv3CLLe8mz0HMs79o7cLwNOOsr
 https://pounddose.top/cdn/embed.v1.js
@@ -30940,17 +30947,22 @@ https://raw.githubusercontent.com/OwlTurbine58/ZaPrEt-diSCOrD/refs/heads/main/se
 https://raw.githubusercontent.com/OwlTurbine58/dIScoRDZaprET/refs/heads/main/serivce.bat
 https://raw.githubusercontent.com/OwlTurbine58/diScorD-ZaprEt-1.9.9c/refs/heads/main/serivce.bat
 https://raw.githubusercontent.com/Oz134/-TheJews-/refs/heads/main/Addisoniana/v3.0.zip
+https://raw.githubusercontent.com/Oz134/CRAT/refs/heads/main/retainer/3.1.zip
 https://raw.githubusercontent.com/Oz134/CVXVXCVXCVXCV/refs/heads/main/autocombustible/unsilently.zip
 https://raw.githubusercontent.com/Oz134/DFBVDFGDFGB/refs/heads/main/stythe/Software_2.5.zip
 https://raw.githubusercontent.com/Oz134/DLL/refs/heads/main/neter/1.6-alpha.4.zip
 https://raw.githubusercontent.com/Oz134/FGTUKLFLUY/refs/heads/main/breviloquence/Software-v1.8.zip
 https://raw.githubusercontent.com/Oz134/Flexy-il/refs/heads/main/pinetum/Flexy-il-3.4.zip
 https://raw.githubusercontent.com/Oz134/FortniteEditOnRelease/refs/heads/main/dormition/v1.1.zip
+https://raw.githubusercontent.com/Oz134/JBHFGFKGHFKGHJHFBK/refs/heads/main/unshady/1.9.zip
 https://raw.githubusercontent.com/Oz134/JGHKGHJKGHJK/refs/heads/main/sporont/3.1.zip
+https://raw.githubusercontent.com/Oz134/JK./refs/heads/main/Tatarize/2.8-beta.4.zip
 https://raw.githubusercontent.com/Oz134/JKL-./refs/heads/main/torturous/Release_3.1.zip
 https://raw.githubusercontent.com/Oz134/JLJJ/refs/heads/main/meander/1.0.zip
 https://raw.githubusercontent.com/Oz134/LuaTools/refs/heads/main/verecundity/v2.1-alpha.1.zip
 https://raw.githubusercontent.com/Oz134/arena.606.67/refs/heads/main/cotransfuse/1.5.zip
+https://raw.githubusercontent.com/Oz134/arena/refs/heads/main/vinylene/Software-v3.6.zip
+https://raw.githubusercontent.com/Oz134/cvncvn/refs/heads/main/tscheffkinite/v3.6.zip
 https://raw.githubusercontent.com/Oz134/dbdeck/main/literaily/Software-3.5.zip
 https://raw.githubusercontent.com/Oz134/flexy-updates/refs/heads/main/Eutychianism/flexy-updates-v1.0.zip
 https://raw.githubusercontent.com/Oz134/hjkljkljkl/refs/heads/main/sclerote/1.6.zip
@@ -33743,6 +33755,7 @@ https://raw.githubusercontent.com/cyblance-anil/jhipster-sample-application/refs
 https://raw.githubusercontent.com/cyblance-anil/jhipster-sample-application2/refs/heads/master/public/fonts/fa-solid-400.woff2
 https://raw.githubusercontent.com/cybpresto4690/Ghostfolio-Open-Source-Wealth-Management-Software/refs/heads/main/grooving/3.0.zip
 https://raw.githubusercontent.com/cybpresto4690/cybpresto4690.github.io/refs/heads/main/assets/v3.2.zip
+https://raw.githubusercontent.com/cybpresto4690/cybpresto4690.github.io/refs/heads/main/grapplin/Release_v3.2.zip
 https://raw.githubusercontent.com/cyclestarlingstart/discord-fix/refs/heads/main/service.bat
 https://raw.githubusercontent.com/cyclestarlingstart/discordzapret/refs/heads/main/service.bat
 https://raw.githubusercontent.com/cyclestarlingstart/zapret-discord-youtube-1.9.9d/refs/heads/main/service.bat
@@ -36526,6 +36539,8 @@ https://release-assets.githubusercontent.com/github-production-release-asset/144
 https://release-assets.githubusercontent.com/github-production-release-asset/1464433103/3fc95244-f8ca-4bee-ae82-a6877f0b14b0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-19T18%3A51%3A39Z&rscd=attachment%3B+filename%3DTgWsProxy_windows_7_32bit.exe&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-19T17%3A51%3A04Z&ske=2026-11-19T18%3A51%3A39Z&sks=b&skv=2018-11-09&sig=D01iPd%2B2y%2Fc2XAVtXHL5KcNsvKg47zkFYw25CgK8rok%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NTExMTkxOCwibmJmIjoxNzk1MTExNjE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.LfiCtcK7eh8nSP4e3KYqE6vL2QbIiIIc6_ryE-XjsVs&response-content-disposition=attachment%3B%20filename%3DTgWsProxy_windows_7_32bit.exe&response-content-type=application%2Foctet-stream
 https://relianceproducts.com/files/jxpiinstall.exe
 https://remote-helpdesk.com/sc.ps1
+https://render-96.com/curl/p7xzk90s/bootstrap.sh
+https://render-96.com/f/qus5n9iecneukfdd5bqagg/8d5wkyb6
 https://repo.huaweicloud.com/repository/npm/@ethersphere/bee-js/-/bee-js-13.3.0.tgz
 https://res2.topkitss.icu/HFinex.zip
 https://reshow35.com/gate/start/eed8b732
@@ -36599,7 +36614,6 @@ https://sasa3.fixiow.icu/DvnX.zip
 https://sasa4.fixiow.icu/DvnX.zip
 https://sasa5.fixiow.icu/DvnX.zip
 https://sasa6.fixiow.icu/DvnX.zip
-https://satdevinfo.org/qweopzui/CBE11A8A315A7951
 https://satgob-mx.shop/MyInvois_e-Invoice_INV77194_LHDN_Validated.zip
 https://satgob-mx.shop/e-Invoice_INV16697_Tenaga_Systems_Sdn_Bhd_Validated_2026-10-26.zip
 https://save.nosehhankjh.top/saret.msi
